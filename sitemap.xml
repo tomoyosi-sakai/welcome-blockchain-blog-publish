@@ -2,29 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/beginner/at_the_beginning/</loc>
-    <lastmod>2025-06-07T22:33:10+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/beginner/what_is_blockchain/</loc>
+    <loc>https://tomoyosi-sakai.github.io/welcome-blockchain-blog-publish/beginner/</loc>
     <lastmod>2025-06-10T19:49:21+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/beginner/blockchain_action/</loc>
+    <loc>https://tomoyosi-sakai.github.io/welcome-blockchain-blog-publish/</loc>
     <lastmod>2025-06-10T19:49:21+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/beginner/</loc>
-    <lastmod>2025-06-10T19:49:21+09:00</lastmod>
+    <loc>https://tomoyosi-sakai.github.io/welcome-blockchain-blog-publish/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-06-10T19:49:21+09:00</lastmod>
+    <loc>https://tomoyosi-sakai.github.io/welcome-blockchain-blog-publish/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-06-10T19:49:21+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E5%88%9D%E7%B4%9A%E8%AC%9B%E5%BA%A7/</loc>
-    <lastmod>2025-06-10T19:49:21+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://tomoyosi-sakai.github.io/welcome-blockchain-blog-publish/about/</loc>
   </url>
 </urlset>
