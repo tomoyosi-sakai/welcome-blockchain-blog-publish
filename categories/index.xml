@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on ようこそ！ブロックチェーンの世界へ</title>
+    <link>https://welcomeblockchain.net/categories/</link>
+    <description>Recent content in Categories on ようこそ！ブロックチェーンの世界へ</description>
+    <generator>Hugo -- 0.147.7</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 16 Jun 2025 08:00:00 +0900</lastBuildDate>
+    <atom:link href="https://welcomeblockchain.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>講座</title>
+      <link>https://welcomeblockchain.net/categories/%E8%AC%9B%E5%BA%A7/</link>
+      <pubDate>Mon, 16 Jun 2025 08:00:00 +0900</pubDate>
+      <guid>https://welcomeblockchain.net/categories/%E8%AC%9B%E5%BA%A7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>初級講座</title>
+      <link>https://welcomeblockchain.net/categories/%E5%88%9D%E7%B4%9A%E8%AC%9B%E5%BA%A7/</link>
+      <pubDate>Mon, 16 Jun 2025 08:00:00 +0900</pubDate>
+      <guid>https://welcomeblockchain.net/categories/%E5%88%9D%E7%B4%9A%E8%AC%9B%E5%BA%A7/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,2045 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ようこそ！ブロックチェーンの世界へ</title>
+    <link>https://welcomeblockchain.net/</link>
+    <description>Recent content on ようこそ！ブロックチェーンの世界へ</description>
+    <generator>Hugo -- 0.147.7</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 16 Jun 2025 08:00:00 +0900</lastBuildDate>
+    <atom:link href="https://welcomeblockchain.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【初級】ブロックチェーン講座について</title>
+      <link>https://welcomeblockchain.net/beginner/at_the_beginning/</link>
+      <pubDate>Mon, 16 Jun 2025 08:00:00 +0900</pubDate>
+      <guid>https://welcomeblockchain.net/beginner/at_the_beginning/</guid>
+      <description>&lt;h2 id=&#34;1-ご挨拶&#34;&gt;1. ご挨拶&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/sakai/sakai_normal_hu_52dd096eede09a4f.webp&#34; alt=&#34;鎖塊&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;鎖塊&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0FFD080;--talk-color-dark: #041F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        当サイト運営の鎖塊知能（さかい ともよし）です。当セクションでは、ブロックチェーン学習の初級カリキュラムを取り扱っています。全ての講義は会話形式で行われますので、初心者の方でも気軽に読んでいただければと思います。私は講義には参加しませんが、皆さんの良い学びとなることを祈っています。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        皆さん、本日は江輝ブロックチェーンアカデミーへようこそお越しくださいました。当学院は『誰一人、取り残さない学びを』をモットーに、分散型技術の普及と実践教育を目指しています。創立者兼学長の江輝智司（えてる さとし）です。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        はじめまして、弧鎖塊結（こさかい ゆい）と申します。私も皆さんと一緒に先生の講義を受けることになりました。ブロックチェーンのことはほとんど理解できていないので、皆さんと一緒に少しずつ学んでいければと思います。よろしくお願いします。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_smile_hu_ed10c76ec598722e.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        私は弧鎖塊円（こさかい まどか）！今日は皆に挨拶するためにお姉ちゃんについてきました！私は講義は受けられないけど、帰ったらちゃんと教えてね、お姉ちゃん！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;2-初級カリキュラムについて&#34;&gt;2. 初級カリキュラムについて&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        皆さん、当学院の初級カリキュラムについてご説明いたします。このコースは初学者の皆さんを対象に、ブロックチェーン技術を基礎からしっかり学んでいただくために設計されています。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        まずは基礎からゆっくり学んでいきましょう。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        まず、第１章では『ブロックチェーンとは何か』を扱い、分散型台帳の基本概念と中央集権型システムとの違いを図解で理解します。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        分散型台帳、中央集権型システム…
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        次に第２章『ブロックチェーンはどう動くのか』では、トランザクションの生成からノード検証、ブロック生成までの一連の流れをステップごとに追い、内部の仕組みを体感していただきます。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        トランザクション、ノード…
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        第３章『ブロックチェーンの主な活用例』では、ビットコインをはじめNFTや医療記録、投票システムなど、身近なユースケースを通じて用途とメリットを学びます。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        NFT…
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そして最終章の第４章『メリット・課題・今後の展望』では、改ざん耐性や透明性などの強みと、スケーラビリティやエネルギー消費といった課題を整理し、レイヤー２やゼロ知識証明といった最新技術まで概観します。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        スケーラビリティ、レイヤー２、ゼロ知識証明…
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        先生、難しい単語がたくさん出てきて私、少し不安になってきました…
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_smile_hu_a2c2d05cfe63a0f7.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        当学院は『誰一人、取り残さない学びを』がモットーです。わからないところはしっかりと説明していきますから、安心してください。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ありがとうございます！頑張ります！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_smile_hu_ed10c76ec598722e.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        お姉ちゃん、頑張ってねー！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        それでは皆さん、一緒に学びの旅を始めましょう。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>【初級】第1章：ブロックチェーンとは何か</title>
+      <link>https://welcomeblockchain.net/beginner/what_is_blockchain/</link>
+      <pubDate>Mon, 16 Jun 2025 08:00:00 +0900</pubDate>
+      <guid>https://welcomeblockchain.net/beginner/what_is_blockchain/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;hr&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        この記事では、私と結さんが、中央集権型システムと分散型システム、そしてそれを応用したブロックチェーン技術について、対話形式でわかりやすく学んでいきます。まずは、インターネット上のデータ保存がどのように行われてきたか、基本的な仕組みから確認していきましょう。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;1-中央集権型システムの特徴と課題&#34;&gt;1. 中央集権型システムの特徴と課題&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        結さん、私たちが普段使っているネットサービスは、どこか一か所のサーバに情報が集まって管理されていることが多いのをご存知ですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ええと……たとえばSNSとかネットショップとかですか？なんとなく、企業のサーバーで全部まとめて保存されてるイメージがあります。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        その通りです。このように、特定の企業や組織がすべてのデータと機能を集中管理する仕組みを「中央集権型システム（Centralized System）」と呼びます。システムの制御や判断が一つの場所に集約されていることで、管理がしやすい一方、トラブルに弱いという側面があります。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        どういうときにトラブルになっちゃうんですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        例えば、そのサーバーがハッキングされたり停電や機械トラブルで止まった場合、ユーザーはサービスを一切利用できなくなります。これを「単一障害点（Single Point of Failure）」と呼び、中央集権型の最大の弱点です。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;centralized_system.webp&#34;
+         alt=&#34;中央集権型システム&#34; width=&#34;512&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            故障や攻撃で全サービスが停止しやすく、単一障害点が最大のリスクに
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_surprise_hu_d0c7b5ea5f021ec5.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        あ、全部一箇所に頼ってると、そこがダメになったら全部ダメになっちゃうんですね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        まさにその通り。特に個人情報や金融データのような重要な情報が狙われやすい現代において、単一障害点を抱えることは大きなリスクになります。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        もちろん、現代の多くの企業サービスでは、サーバーの冗長構成やバックアップ体制、フェイルオーバー、CDNの活用など、障害への対策はしっかり取られています。それでも、極端な集中管理に依存する構造そのものにリスクが残るという点が、分散型の発想の出発点でもあるのです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;2-分散型システムの概念&#34;&gt;2. 分散型システムの概念&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        こうした中央集権の問題点に対して考え出されたのが「分散型システム（Distributed System）」です。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        分散っていうと……データをバラバラにするんですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_smile_hu_a2c2d05cfe63a0f7.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        良い質問ですね。分散型では、複数のノード（コンピュータ）がネットワーク上で互いに連携しながら、全体の仕組みを動かします。データや処理を一か所に集めるのではなく、それぞれのノードが役割を持って、相互に情報をやりとりします。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        それなら、どこか1つのノードが止まっても、他のノードでカバーできそうですね！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そうです。これにより、可用性（Availability）や耐障害性が飛躍的に向上します。特に、ノード同士がP2P（ピア・ツー・ピア）でつながることで、中央管理者なしでも情報のやりとりや整合性の確認ができるようになります。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;distributed_system.webp&#34;
+         alt=&#34;分散型システム&#34; width=&#34;512&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            故障や攻撃でノードが停止しても、他のノードでサービスを継続して提供できる
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        自動でお互いにチェックし合ってるような感じなんですね。なんか、チームワークって感じで頼もしいです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;3-ブロックチェーンが実現する分散台帳&#34;&gt;3. ブロックチェーンが実現する分散台帳&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        分散型システムをさらに発展させたものが、私たちが学ぼうとしている「ブロックチェーン」です。ブロックチェーンは、分散型ネットワーク上で正確な取引履歴を管理するための台帳（Ledger）のような仕組みです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        台帳って、昔のお店で売上を記録してた帳簿みたいなものですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_smile_hu_a2c2d05cfe63a0f7.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        まさにそのイメージです。ブロックチェーンでは、取引データを「ブロック」という単位にまとめ、それぞれのブロックに「ハッシュ」という指紋のような値を付けて、鎖のように順番につなげて記録していきます。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;blockchain_structure.webp&#34;
+         alt=&#34;ブロックチェーンの基本構造&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            １つ前のブロックのハッシュ値をキーにして全てのブロックが１列に繋がっている
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        指紋？ハッシュってなんですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ハッシュとは、任意のデータから固定長の文字列を作り出す関数のことです。特に次の3つの性質が、ブロックチェーンの安全性を支える重要なポイントとなっています。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;性質&lt;/th&gt;
+          &lt;th&gt;説明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;一方向性&lt;/td&gt;
+          &lt;td&gt;ハッシュ値から元のデータを復元することがほぼ不可能である&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;衝突耐性&lt;/td&gt;
+          &lt;td&gt;異なる入力から同じハッシュ値が出る確率が極めて低い&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;高感度（Avalanche）&lt;/td&gt;
+          &lt;td&gt;わずかな入力の違いでも、まったく異なるハッシュ値が生成される&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        たとえば「block」と「blocks」のように、1文字違うだけでもまったく別のハッシュ値になります。これにより、過去の記録がほんの少しでも書き換えられると、すぐにそれが分かる仕組みになっているんです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;blockchain_tamper_resistance.webp&#34;
+         alt=&#34;ブロックチェーンで改ざんが発生した際の動き&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            改ざんされたブロックはハッシュ値が変更されることにより、次のブロックとの連結が消失しチェーンから排除される
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        なるほど！ハッシュはデータが改ざんされていないことを確認するための指紋なんですね！そして、チェーンの途中を改ざんすると、次のブロックが持っている指紋と一致しないから、すぐバレちゃうんですね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        さらに、ネットワーク上のすべてのノードがこのチェーン全体をコピーして保持しているため、誰か1人が不正をしても、他の多数のノードが正しい記録を保持している状態が保たれます。これが「分散台帳」と呼ばれる理由です。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        みんなで同じノートを持ってるってことか……それなら安心ですね！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;4-まとめと次章予告&#34;&gt;4. まとめと次章予告&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        &lt;ul&gt;
+&lt;li&gt;中央集権型システムは一元管理がしやすい反面、単一障害点のリスクが高い。&lt;/li&gt;
+&lt;li&gt;分散型システムは可用性と冗長性に優れ、障害に強い構造を実現できる。&lt;/li&gt;
+&lt;li&gt;ブロックチェーンは分散型の仕組みを活かし、正確で改ざんが困難なデジタル台帳を提供する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;次章では、このブロックチェーン上で取引がどのように生成され、どのようにして新しいブロックとして台帳に追加されるのか、その一連の流れを体験的に学んでいきます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>【初級】第2章：ブロックチェーンはどう動くのか</title>
+      <link>https://welcomeblockchain.net/beginner/blockchain_action/</link>
+      <pubDate>Mon, 16 Jun 2025 08:00:00 +0900</pubDate>
+      <guid>https://welcomeblockchain.net/beginner/blockchain_action/</guid>
+      <description>&lt;h2 id=&#34;1-はじめに&#34;&gt;1. はじめに&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        前回、ブロックチェーンって「みんなで同じノートを持ってる」って聞いて安心したんですけど…そのノートって、どうやって書かれていくんですか？ブロックって「チェーン状に並んでて、それぞれ前のハッシュを覚えてる」っていう仕組みでしたよね？それがどうやって動くのか気になります。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_smile_hu_a2c2d05cfe63a0f7.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ブロックチェーンの仕組みについて興味を持ってくれたようでなによりです。今回の記事では、代表的なブロックチェーンであるビットコインのネットワークを題材にして、取引がどのように処理され、記録されていくのかを順を追って学びましょう。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;2-取引トランザクションのはじまり&#34;&gt;2. 取引（トランザクション）のはじまり&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ビットコインを送るって、誰かが誰かに通貨を移すってことですよね？でも、実際にどういう手順で送るんですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        いい質問ですね。ビットコインでの送金や受け取りといった記録は「トランザクション」と呼ばれます。トランザクションとは、過去に受け取ったビットコインを使って、新たな送り先に送金するという命令書のようなものです。次の図を見てください。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;bitcoin_transaction.webp&#34;
+         alt=&#34;ビットコイン送金時のトランザクション&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            ※簡略化のため、送金手数料の記載を省略しています。
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        まずユーザーは、送りたい相手のアドレスと金額を指定します。そして、自分が過去に受け取ってまだ使っていないビットコイン（UTXO）を入力として選び、それらをまとめてトランザクションを構成します。この図では、私が過去に受け取った1.0BTCのうち、0.8BTCを結さんに送金し、残りを私に戻すトランザクションを作成しています。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        このとき、自分が正当な持ち主であることを証明するために入力側に「電子署名」を行います。これは、自分の秘密鍵で取引内容に署名することで、誰でもその署名が正しいかを確認できる仕組みです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        電子署名って、「この取引は私がやりました」って証明する仕組みなんですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        その通りです。電子署名があることで、そのトランザクションが本人によるものであり、かつ途中で改ざんされていないことも保証できます。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        署名されたトランザクションはネットワークに送られ、周囲のノードたちがそれを受け取ります。ノードは署名や残高、二重支払いの有無などを確認し、問題がなければその取引を未承認トランザクションとしてプールに保管します。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        未承認ということは、この後誰かが承認をするということですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        はい。そして、このトランザクションの承認プロセスがビットコインの安全性を支える上で非常に重要な要素となっています。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;3-ノードによる検証とブロック化&#34;&gt;3. ノードによる検証とブロック化&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        トランザクションを受け取ったノードは、どうやってその取引が本当に正しいものか判断するんですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        前節でもお話したように、主に3つのポイントを確認します。まずは電子署名が正しく、自分のアドレスの秘密鍵から発行されたものであること。次に、送信者が実際にその金額分の未使用コイン（UTXO）を持っているか。そして、同じコインが別の取引にも使われていないか、つまり二重支払いのチェックです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        なるほど…たしかに、それを見落としたら不正が起きちゃいますもんね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_smile_hu_a2c2d05cfe63a0f7.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そうなんです。そして、こうして検証された未承認トランザクションは一時的にノードに保管され、マイナーと呼ばれるノードたちによってブロックにまとめられていきます。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ビットコインでは、おおよそ10分に1回のペースで新しいブロックが作られます。マイナーは、未承認トランザクションの中からいくつかを選び、1つのブロックにまとめたうえで、一定の条件を満たすハッシュ値を見つけるという「計算競争（マイニング）」に挑戦します。次の図を見てください。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;bitcoin_mining.webp&#34;
+         alt=&#34;マイニング時のマイナーの動作&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            ※簡略化のため、ブロックに含まれる情報の一部を省略しています。
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        なんかちょっと複雑な感じの図ですね…
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        少し複雑に見えるかもしれませんが、ここはビットコインの安全性を支える非常に重要な部分です。ぜひ理解しておきましょう。前回の講義で、新しいブロックをチェーンにつなぐキーが、直前のブロックのハッシュ値であることを説明しましたね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

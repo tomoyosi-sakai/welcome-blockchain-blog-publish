@@ -1,0 +1,2867 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>【初級】第1章：ブロックチェーンとは何か | ようこそ！ブロックチェーンの世界へ</title>
+<meta name="keywords" content="ブロックチェーン, 初心者向け, 入門, 中央集権型システム, 分散システム, 分散台帳">
+<meta name="description" content="はじめに
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        この記事では、私と結さんが、中央集権型システムと分散型システム、そしてそれを応用したブロックチェーン技術について、対話形式でわかりやすく学んでいきます。まずは、インターネット上のデータ保存がどのように行われてきたか、基本的な仕組みから確認していきましょう。
+      
+    
+  
+
+1. 中央集権型システムの特徴と課題
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        結さん、私たちが普段使っているネットサービスは、どこか一か所のサーバに情報が集まって管理されていることが多いのをご存知ですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        ええと……たとえばSNSとかネットショップとかですか？なんとなく、企業のサーバーで全部まとめて保存されてるイメージがあります。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        その通りです。このように、特定の企業や組織がすべてのデータと機能を集中管理する仕組みを「中央集権型システム（Centralized System）」と呼びます。システムの制御や判断が一つの場所に集約されていることで、管理がしやすい一方、トラブルに弱いという側面があります。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        どういうときにトラブルになっちゃうんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        例えば、そのサーバーがハッキングされたり停電や機械トラブルで止まった場合、ユーザーはサービスを一切利用できなくなります。これを「単一障害点（Single Point of Failure）」と呼び、中央集権型の最大の弱点です。
+      
+    
+  
+
+
+     
+            故障や攻撃で全サービスが停止しやすく、単一障害点が最大のリスクに
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        あ、全部一箇所に頼ってると、そこがダメになったら全部ダメになっちゃうんですね。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        まさにその通り。特に個人情報や金融データのような重要な情報が狙われやすい現代において、単一障害点を抱えることは大きなリスクになります。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        もちろん、現代の多くの企業サービスでは、サーバーの冗長構成やバックアップ体制、フェイルオーバー、CDNの活用など、障害への対策はしっかり取られています。それでも、極端な集中管理に依存する構造そのものにリスクが残るという点が、分散型の発想の出発点でもあるのです。
+      
+    
+  
+
+2. 分散型システムの概念
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        こうした中央集権の問題点に対して考え出されたのが「分散型システム（Distributed System）」です。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        分散っていうと……データをバラバラにするんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        良い質問ですね。分散型では、複数のノード（コンピュータ）がネットワーク上で互いに連携しながら、全体の仕組みを動かします。データや処理を一か所に集めるのではなく、それぞれのノードが役割を持って、相互に情報をやりとりします。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        それなら、どこか1つのノードが止まっても、他のノードでカバーできそうですね！
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        そうです。これにより、可用性（Availability）や耐障害性が飛躍的に向上します。特に、ノード同士がP2P（ピア・ツー・ピア）でつながることで、中央管理者なしでも情報のやりとりや整合性の確認ができるようになります。
+      
+    
+  
+
+
+     
+            故障や攻撃でノードが停止しても、他のノードでサービスを継続して提供できる
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        自動でお互いにチェックし合ってるような感じなんですね。なんか、チームワークって感じで頼もしいです。
+      
+    
+  
+
+3. ブロックチェーンが実現する分散台帳
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        分散型システムをさらに発展させたものが、私たちが学ぼうとしている「ブロックチェーン」です。ブロックチェーンは、分散型ネットワーク上で正確な取引履歴を管理するための台帳（Ledger）のような仕組みです。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        台帳って、昔のお店で売上を記録してた帳簿みたいなものですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        まさにそのイメージです。ブロックチェーンでは、取引データを「ブロック」という単位にまとめ、それぞれのブロックに「ハッシュ」という指紋のような値を付けて、鎖のように順番につなげて記録していきます。
+      
+    
+  
+
+
+     
+            １つ前のブロックのハッシュ値をキーにして全てのブロックが１列に繋がっている
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        指紋？ハッシュってなんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        ハッシュとは、任意のデータから固定長の文字列を作り出す関数のことです。特に次の3つの性質が、ブロックチェーンの安全性を支える重要なポイントとなっています。
+      
+    
+  
+
+
+  
+      
+          性質
+          説明
+      
+  
+  
+      
+          一方向性
+          ハッシュ値から元のデータを復元することがほぼ不可能である
+      
+      
+          衝突耐性
+          異なる入力から同じハッシュ値が出る確率が極めて低い
+      
+      
+          高感度（Avalanche）
+          わずかな入力の違いでも、まったく異なるハッシュ値が生成される
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        たとえば「block」と「blocks」のように、1文字違うだけでもまったく別のハッシュ値になります。これにより、過去の記録がほんの少しでも書き換えられると、すぐにそれが分かる仕組みになっているんです。
+      
+    
+  
+
+
+     
+            改ざんされたブロックはハッシュ値が変更されることにより、次のブロックとの連結が消失しチェーンから排除される
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        なるほど！ハッシュはデータが改ざんされていないことを確認するための指紋なんですね！そして、チェーンの途中を改ざんすると、次のブロックが持っている指紋と一致しないから、すぐバレちゃうんですね。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        さらに、ネットワーク上のすべてのノードがこのチェーン全体をコピーして保持しているため、誰か1人が不正をしても、他の多数のノードが正しい記録を保持している状態が保たれます。これが「分散台帳」と呼ばれる理由です。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        みんなで同じノートを持ってるってことか……それなら安心ですね！
+      
+    
+  
+
+4. まとめと次章予告
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        
+中央集権型システムは一元管理がしやすい反面、単一障害点のリスクが高い。
+分散型システムは可用性と冗長性に優れ、障害に強い構造を実現できる。
+ブロックチェーンは分散型の仕組みを活かし、正確で改ざんが困難なデジタル台帳を提供する。
+
+次章では、このブロックチェーン上で取引がどのように生成され、どのようにして新しいブロックとして台帳に追加されるのか、その一連の流れを体験的に学んでいきます。">
+<meta name="author" content="">
+<link rel="canonical" href="https://welcomeblockchain.net/beginner/what_is_blockchain/">
+<meta name="google-site-verification" content="G-J9QJEK90RZ">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9a39811af7a00a1eba8d8da420a79ff30e30f3bcc3f39b2a85d2fa3ae781a85d.css" integrity="sha256-mjmBGvegCh66jY2kIKef8w4w87zD85sqhdL6OueBqF0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://welcomeblockchain.net/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://welcomeblockchain.net/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://welcomeblockchain.net/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://welcomeblockchain.net/apple-touch-icon.png">
+<link rel="mask-icon" href="https://welcomeblockchain.net/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ja" href="https://welcomeblockchain.net/beginner/what_is_blockchain/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /><meta property="og:url" content="https://welcomeblockchain.net/beginner/what_is_blockchain/">
+  <meta property="og:site_name" content="ようこそ！ブロックチェーンの世界へ">
+  <meta property="og:title" content="【初級】第1章：ブロックチェーンとは何か">
+  <meta property="og:description" content="はじめに 江輝 この記事では、私と結さんが、中央集権型システムと分散型システム、そしてそれを応用したブロックチェーン技術について、対話形式でわかりやすく学んでいきます。まずは、インターネット上のデータ保存がどのように行われてきたか、基本的な仕組みから確認していきましょう。 1. 中央集権型システムの特徴と課題 江輝 結さん、私たちが普段使っているネットサービスは、どこか一か所のサーバに情報が集まって管理されていることが多いのをご存知ですか？ 結 ええと……たとえばSNSとかネットショップとかですか？なんとなく、企業のサーバーで全部まとめて保存されてるイメージがあります。 江輝 その通りです。このように、特定の企業や組織がすべてのデータと機能を集中管理する仕組みを「中央集権型システム（Centralized System）」と呼びます。システムの制御や判断が一つの場所に集約されていることで、管理がしやすい一方、トラブルに弱いという側面があります。 結 どういうときにトラブルになっちゃうんですか？ 江輝 例えば、そのサーバーがハッキングされたり停電や機械トラブルで止まった場合、ユーザーはサービスを一切利用できなくなります。これを「単一障害点（Single Point of Failure）」と呼び、中央集権型の最大の弱点です。 故障や攻撃で全サービスが停止しやすく、単一障害点が最大のリスクに 結 あ、全部一箇所に頼ってると、そこがダメになったら全部ダメになっちゃうんですね。 江輝 まさにその通り。特に個人情報や金融データのような重要な情報が狙われやすい現代において、単一障害点を抱えることは大きなリスクになります。 江輝 もちろん、現代の多くの企業サービスでは、サーバーの冗長構成やバックアップ体制、フェイルオーバー、CDNの活用など、障害への対策はしっかり取られています。それでも、極端な集中管理に依存する構造そのものにリスクが残るという点が、分散型の発想の出発点でもあるのです。 2. 分散型システムの概念 江輝 こうした中央集権の問題点に対して考え出されたのが「分散型システム（Distributed System）」です。 結 分散っていうと……データをバラバラにするんですか？ 江輝 良い質問ですね。分散型では、複数のノード（コンピュータ）がネットワーク上で互いに連携しながら、全体の仕組みを動かします。データや処理を一か所に集めるのではなく、それぞれのノードが役割を持って、相互に情報をやりとりします。 結 それなら、どこか1つのノードが止まっても、他のノードでカバーできそうですね！ 江輝 そうです。これにより、可用性（Availability）や耐障害性が飛躍的に向上します。特に、ノード同士がP2P（ピア・ツー・ピア）でつながることで、中央管理者なしでも情報のやりとりや整合性の確認ができるようになります。 故障や攻撃でノードが停止しても、他のノードでサービスを継続して提供できる 結 自動でお互いにチェックし合ってるような感じなんですね。なんか、チームワークって感じで頼もしいです。 3. ブロックチェーンが実現する分散台帳 江輝 分散型システムをさらに発展させたものが、私たちが学ぼうとしている「ブロックチェーン」です。ブロックチェーンは、分散型ネットワーク上で正確な取引履歴を管理するための台帳（Ledger）のような仕組みです。 結 台帳って、昔のお店で売上を記録してた帳簿みたいなものですか？ 江輝 まさにそのイメージです。ブロックチェーンでは、取引データを「ブロック」という単位にまとめ、それぞれのブロックに「ハッシュ」という指紋のような値を付けて、鎖のように順番につなげて記録していきます。 １つ前のブロックのハッシュ値をキーにして全てのブロックが１列に繋がっている 結 指紋？ハッシュってなんですか？ 江輝 ハッシュとは、任意のデータから固定長の文字列を作り出す関数のことです。特に次の3つの性質が、ブロックチェーンの安全性を支える重要なポイントとなっています。 性質 説明 一方向性 ハッシュ値から元のデータを復元することがほぼ不可能である 衝突耐性 異なる入力から同じハッシュ値が出る確率が極めて低い 高感度（Avalanche） わずかな入力の違いでも、まったく異なるハッシュ値が生成される 江輝 たとえば「block」と「blocks」のように、1文字違うだけでもまったく別のハッシュ値になります。これにより、過去の記録がほんの少しでも書き換えられると、すぐにそれが分かる仕組みになっているんです。 改ざんされたブロックはハッシュ値が変更されることにより、次のブロックとの連結が消失しチェーンから排除される 結 なるほど！ハッシュはデータが改ざんされていないことを確認するための指紋なんですね！そして、チェーンの途中を改ざんすると、次のブロックが持っている指紋と一致しないから、すぐバレちゃうんですね。 江輝 さらに、ネットワーク上のすべてのノードがこのチェーン全体をコピーして保持しているため、誰か1人が不正をしても、他の多数のノードが正しい記録を保持している状態が保たれます。これが「分散台帳」と呼ばれる理由です。 結 みんなで同じノートを持ってるってことか……それなら安心ですね！ 4. まとめと次章予告 江輝 中央集権型システムは一元管理がしやすい反面、単一障害点のリスクが高い。 分散型システムは可用性と冗長性に優れ、障害に強い構造を実現できる。 ブロックチェーンは分散型の仕組みを活かし、正確で改ざんが困難なデジタル台帳を提供する。 次章では、このブロックチェーン上で取引がどのように生成され、どのようにして新しいブロックとして台帳に追加されるのか、その一連の流れを体験的に学んでいきます。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="beginner">
+    <meta property="article:published_time" content="2025-06-16T08:00:00+09:00">
+    <meta property="article:modified_time" content="2025-06-16T08:00:00+09:00">
+    <meta property="og:image" content="https://welcomeblockchain.net/banner.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welcomeblockchain.net/banner.webp">
+<meta name="twitter:title" content="【初級】第1章：ブロックチェーンとは何か">
+<meta name="twitter:description" content="はじめに
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        この記事では、私と結さんが、中央集権型システムと分散型システム、そしてそれを応用したブロックチェーン技術について、対話形式でわかりやすく学んでいきます。まずは、インターネット上のデータ保存がどのように行われてきたか、基本的な仕組みから確認していきましょう。
+      
+    
+  
+
+1. 中央集権型システムの特徴と課題
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        結さん、私たちが普段使っているネットサービスは、どこか一か所のサーバに情報が集まって管理されていることが多いのをご存知ですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        ええと……たとえばSNSとかネットショップとかですか？なんとなく、企業のサーバーで全部まとめて保存されてるイメージがあります。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        その通りです。このように、特定の企業や組織がすべてのデータと機能を集中管理する仕組みを「中央集権型システム（Centralized System）」と呼びます。システムの制御や判断が一つの場所に集約されていることで、管理がしやすい一方、トラブルに弱いという側面があります。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        どういうときにトラブルになっちゃうんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        例えば、そのサーバーがハッキングされたり停電や機械トラブルで止まった場合、ユーザーはサービスを一切利用できなくなります。これを「単一障害点（Single Point of Failure）」と呼び、中央集権型の最大の弱点です。
+      
+    
+  
+
+
+     
+            故障や攻撃で全サービスが停止しやすく、単一障害点が最大のリスクに
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        あ、全部一箇所に頼ってると、そこがダメになったら全部ダメになっちゃうんですね。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        まさにその通り。特に個人情報や金融データのような重要な情報が狙われやすい現代において、単一障害点を抱えることは大きなリスクになります。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        もちろん、現代の多くの企業サービスでは、サーバーの冗長構成やバックアップ体制、フェイルオーバー、CDNの活用など、障害への対策はしっかり取られています。それでも、極端な集中管理に依存する構造そのものにリスクが残るという点が、分散型の発想の出発点でもあるのです。
+      
+    
+  
+
+2. 分散型システムの概念
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        こうした中央集権の問題点に対して考え出されたのが「分散型システム（Distributed System）」です。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        分散っていうと……データをバラバラにするんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        良い質問ですね。分散型では、複数のノード（コンピュータ）がネットワーク上で互いに連携しながら、全体の仕組みを動かします。データや処理を一か所に集めるのではなく、それぞれのノードが役割を持って、相互に情報をやりとりします。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        それなら、どこか1つのノードが止まっても、他のノードでカバーできそうですね！
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        そうです。これにより、可用性（Availability）や耐障害性が飛躍的に向上します。特に、ノード同士がP2P（ピア・ツー・ピア）でつながることで、中央管理者なしでも情報のやりとりや整合性の確認ができるようになります。
+      
+    
+  
+
+
+     
+            故障や攻撃でノードが停止しても、他のノードでサービスを継続して提供できる
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        自動でお互いにチェックし合ってるような感じなんですね。なんか、チームワークって感じで頼もしいです。
+      
+    
+  
+
+3. ブロックチェーンが実現する分散台帳
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        分散型システムをさらに発展させたものが、私たちが学ぼうとしている「ブロックチェーン」です。ブロックチェーンは、分散型ネットワーク上で正確な取引履歴を管理するための台帳（Ledger）のような仕組みです。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        台帳って、昔のお店で売上を記録してた帳簿みたいなものですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        まさにそのイメージです。ブロックチェーンでは、取引データを「ブロック」という単位にまとめ、それぞれのブロックに「ハッシュ」という指紋のような値を付けて、鎖のように順番につなげて記録していきます。
+      
+    
+  
+
+
+     
+            １つ前のブロックのハッシュ値をキーにして全てのブロックが１列に繋がっている
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        指紋？ハッシュってなんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        ハッシュとは、任意のデータから固定長の文字列を作り出す関数のことです。特に次の3つの性質が、ブロックチェーンの安全性を支える重要なポイントとなっています。
+      
+    
+  
+
+
+  
+      
+          性質
+          説明
+      
+  
+  
+      
+          一方向性
+          ハッシュ値から元のデータを復元することがほぼ不可能である
+      
+      
+          衝突耐性
+          異なる入力から同じハッシュ値が出る確率が極めて低い
+      
+      
+          高感度（Avalanche）
+          わずかな入力の違いでも、まったく異なるハッシュ値が生成される
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        たとえば「block」と「blocks」のように、1文字違うだけでもまったく別のハッシュ値になります。これにより、過去の記録がほんの少しでも書き換えられると、すぐにそれが分かる仕組みになっているんです。
+      
+    
+  
+
+
+     
+            改ざんされたブロックはハッシュ値が変更されることにより、次のブロックとの連結が消失しチェーンから排除される
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        なるほど！ハッシュはデータが改ざんされていないことを確認するための指紋なんですね！そして、チェーンの途中を改ざんすると、次のブロックが持っている指紋と一致しないから、すぐバレちゃうんですね。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        さらに、ネットワーク上のすべてのノードがこのチェーン全体をコピーして保持しているため、誰か1人が不正をしても、他の多数のノードが正しい記録を保持している状態が保たれます。これが「分散台帳」と呼ばれる理由です。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        みんなで同じノートを持ってるってことか……それなら安心ですね！
+      
+    
+  
+
+4. まとめと次章予告
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        
+中央集権型システムは一元管理がしやすい反面、単一障害点のリスクが高い。
+分散型システムは可用性と冗長性に優れ、障害に強い構造を実現できる。
+ブロックチェーンは分散型の仕組みを活かし、正確で改ざんが困難なデジタル台帳を提供する。
+
+次章では、このブロックチェーン上で取引がどのように生成され、どのようにして新しいブロックとして台帳に追加されるのか、その一連の流れを体験的に学んでいきます。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "初級ブロックチェーン講座",
+      "item": "https://welcomeblockchain.net/beginner/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "【初級】第1章：ブロックチェーンとは何か",
+      "item": "https://welcomeblockchain.net/beginner/what_is_blockchain/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "【初級】第1章：ブロックチェーンとは何か",
+  "name": "【初級】第1章：ブロックチェーンとは何か",
+  "description": "はじめに 江輝 この記事では、私と結さんが、中央集権型システムと分散型システム、そしてそれを応用したブロックチェーン技術について、対話形式でわかりやすく学んでいきます。まずは、インターネット上のデータ保存がどのように行われてきたか、基本的な仕組みから確認していきましょう。 1. 中央集権型システムの特徴と課題 江輝 結さん、私たちが普段使っているネットサービスは、どこか一か所のサーバに情報が集まって管理されていることが多いのをご存知ですか？ 結 ええと……たとえばSNSとかネットショップとかですか？なんとなく、企業のサーバーで全部まとめて保存されてるイメージがあります。 江輝 その通りです。このように、特定の企業や組織がすべてのデータと機能を集中管理する仕組みを「中央集権型システム（Centralized System）」と呼びます。システムの制御や判断が一つの場所に集約されていることで、管理がしやすい一方、トラブルに弱いという側面があります。 結 どういうときにトラブルになっちゃうんですか？ 江輝 例えば、そのサーバーがハッキングされたり停電や機械トラブルで止まった場合、ユーザーはサービスを一切利用できなくなります。これを「単一障害点（Single Point of Failure）」と呼び、中央集権型の最大の弱点です。 故障や攻撃で全サービスが停止しやすく、単一障害点が最大のリスクに 結 あ、全部一箇所に頼ってると、そこがダメになったら全部ダメになっちゃうんですね。 江輝 まさにその通り。特に個人情報や金融データのような重要な情報が狙われやすい現代において、単一障害点を抱えることは大きなリスクになります。 江輝 もちろん、現代の多くの企業サービスでは、サーバーの冗長構成やバックアップ体制、フェイルオーバー、CDNの活用など、障害への対策はしっかり取られています。それでも、極端な集中管理に依存する構造そのものにリスクが残るという点が、分散型の発想の出発点でもあるのです。 2. 分散型システムの概念 江輝 こうした中央集権の問題点に対して考え出されたのが「分散型システム（Distributed System）」です。 結 分散っていうと……データをバラバラにするんですか？ 江輝 良い質問ですね。分散型では、複数のノード（コンピュータ）がネットワーク上で互いに連携しながら、全体の仕組みを動かします。データや処理を一か所に集めるのではなく、それぞれのノードが役割を持って、相互に情報をやりとりします。 結 それなら、どこか1つのノードが止まっても、他のノードでカバーできそうですね！ 江輝 そうです。これにより、可用性（Availability）や耐障害性が飛躍的に向上します。特に、ノード同士がP2P（ピア・ツー・ピア）でつながることで、中央管理者なしでも情報のやりとりや整合性の確認ができるようになります。 故障や攻撃でノードが停止しても、他のノードでサービスを継続して提供できる 結 自動でお互いにチェックし合ってるような感じなんですね。なんか、チームワークって感じで頼もしいです。 3. ブロックチェーンが実現する分散台帳 江輝 分散型システムをさらに発展させたものが、私たちが学ぼうとしている「ブロックチェーン」です。ブロックチェーンは、分散型ネットワーク上で正確な取引履歴を管理するための台帳（Ledger）のような仕組みです。 結 台帳って、昔のお店で売上を記録してた帳簿みたいなものですか？ 江輝 まさにそのイメージです。ブロックチェーンでは、取引データを「ブロック」という単位にまとめ、それぞれのブロックに「ハッシュ」という指紋のような値を付けて、鎖のように順番につなげて記録していきます。 １つ前のブロックのハッシュ値をキーにして全てのブロックが１列に繋がっている 結 指紋？ハッシュってなんですか？ 江輝 ハッシュとは、任意のデータから固定長の文字列を作り出す関数のことです。特に次の3つの性質が、ブロックチェーンの安全性を支える重要なポイントとなっています。 性質 説明 一方向性 ハッシュ値から元のデータを復元することがほぼ不可能である 衝突耐性 異なる入力から同じハッシュ値が出る確率が極めて低い 高感度（Avalanche） わずかな入力の違いでも、まったく異なるハッシュ値が生成される 江輝 たとえば「block」と「blocks」のように、1文字違うだけでもまったく別のハッシュ値になります。これにより、過去の記録がほんの少しでも書き換えられると、すぐにそれが分かる仕組みになっているんです。 改ざんされたブロックはハッシュ値が変更されることにより、次のブロックとの連結が消失しチェーンから排除される 結 なるほど！ハッシュはデータが改ざんされていないことを確認するための指紋なんですね！そして、チェーンの途中を改ざんすると、次のブロックが持っている指紋と一致しないから、すぐバレちゃうんですね。 江輝 さらに、ネットワーク上のすべてのノードがこのチェーン全体をコピーして保持しているため、誰か1人が不正をしても、他の多数のノードが正しい記録を保持している状態が保たれます。これが「分散台帳」と呼ばれる理由です。 結 みんなで同じノートを持ってるってことか……それなら安心ですね！ 4. まとめと次章予告 江輝 中央集権型システムは一元管理がしやすい反面、単一障害点のリスクが高い。 分散型システムは可用性と冗長性に優れ、障害に強い構造を実現できる。 ブロックチェーンは分散型の仕組みを活かし、正確で改ざんが困難なデジタル台帳を提供する。 次章では、このブロックチェーン上で取引がどのように生成され、どのようにして新しいブロックとして台帳に追加されるのか、その一連の流れを体験的に学んでいきます。\n",
+  "keywords": [
+    "ブロックチェーン", "初心者向け", "入門", "中央集権型システム", "分散システム", "分散台帳"
+  ],
+  "articleBody": "はじめに 江輝 この記事では、私と結さんが、中央集権型システムと分散型システム、そしてそれを応用したブロックチェーン技術について、対話形式でわかりやすく学んでいきます。まずは、インターネット上のデータ保存がどのように行われてきたか、基本的な仕組みから確認していきましょう。 1. 中央集権型システムの特徴と課題 江輝 結さん、私たちが普段使っているネットサービスは、どこか一か所のサーバに情報が集まって管理されていることが多いのをご存知ですか？ 結 ええと……たとえばSNSとかネットショップとかですか？なんとなく、企業のサーバーで全部まとめて保存されてるイメージがあります。 江輝 その通りです。このように、特定の企業や組織がすべてのデータと機能を集中管理する仕組みを「中央集権型システム（Centralized System）」と呼びます。システムの制御や判断が一つの場所に集約されていることで、管理がしやすい一方、トラブルに弱いという側面があります。 結 どういうときにトラブルになっちゃうんですか？ 江輝 例えば、そのサーバーがハッキングされたり停電や機械トラブルで止まった場合、ユーザーはサービスを一切利用できなくなります。これを「単一障害点（Single Point of Failure）」と呼び、中央集権型の最大の弱点です。 故障や攻撃で全サービスが停止しやすく、単一障害点が最大のリスクに 結 あ、全部一箇所に頼ってると、そこがダメになったら全部ダメになっちゃうんですね。 江輝 まさにその通り。特に個人情報や金融データのような重要な情報が狙われやすい現代において、単一障害点を抱えることは大きなリスクになります。 江輝 もちろん、現代の多くの企業サービスでは、サーバーの冗長構成やバックアップ体制、フェイルオーバー、CDNの活用など、障害への対策はしっかり取られています。それでも、極端な集中管理に依存する構造そのものにリスクが残るという点が、分散型の発想の出発点でもあるのです。 2. 分散型システムの概念 江輝 こうした中央集権の問題点に対して考え出されたのが「分散型システム（Distributed System）」です。 結 分散っていうと……データをバラバラにするんですか？ 江輝 良い質問ですね。分散型では、複数のノード（コンピュータ）がネットワーク上で互いに連携しながら、全体の仕組みを動かします。データや処理を一か所に集めるのではなく、それぞれのノードが役割を持って、相互に情報をやりとりします。 結 それなら、どこか1つのノードが止まっても、他のノードでカバーできそうですね！ 江輝 そうです。これにより、可用性（Availability）や耐障害性が飛躍的に向上します。特に、ノード同士がP2P（ピア・ツー・ピア）でつながることで、中央管理者なしでも情報のやりとりや整合性の確認ができるようになります。 故障や攻撃でノードが停止しても、他のノードでサービスを継続して提供できる 結 自動でお互いにチェックし合ってるような感じなんですね。なんか、チームワークって感じで頼もしいです。 3. ブロックチェーンが実現する分散台帳 江輝 分散型システムをさらに発展させたものが、私たちが学ぼうとしている「ブロックチェーン」です。ブロックチェーンは、分散型ネットワーク上で正確な取引履歴を管理するための台帳（Ledger）のような仕組みです。 結 台帳って、昔のお店で売上を記録してた帳簿みたいなものですか？ 江輝 まさにそのイメージです。ブロックチェーンでは、取引データを「ブロック」という単位にまとめ、それぞれのブロックに「ハッシュ」という指紋のような値を付けて、鎖のように順番につなげて記録していきます。 １つ前のブロックのハッシュ値をキーにして全てのブロックが１列に繋がっている 結 指紋？ハッシュってなんですか？ 江輝 ハッシュとは、任意のデータから固定長の文字列を作り出す関数のことです。特に次の3つの性質が、ブロックチェーンの安全性を支える重要なポイントとなっています。 性質 説明 一方向性 ハッシュ値から元のデータを復元することがほぼ不可能である 衝突耐性 異なる入力から同じハッシュ値が出る確率が極めて低い 高感度（Avalanche） わずかな入力の違いでも、まったく異なるハッシュ値が生成される 江輝 たとえば「block」と「blocks」のように、1文字違うだけでもまったく別のハッシュ値になります。これにより、過去の記録がほんの少しでも書き換えられると、すぐにそれが分かる仕組みになっているんです。 改ざんされたブロックはハッシュ値が変更されることにより、次のブロックとの連結が消失しチェーンから排除される 結 なるほど！ハッシュはデータが改ざんされていないことを確認するための指紋なんですね！そして、チェーンの途中を改ざんすると、次のブロックが持っている指紋と一致しないから、すぐバレちゃうんですね。 江輝 さらに、ネットワーク上のすべてのノードがこのチェーン全体をコピーして保持しているため、誰か1人が不正をしても、他の多数のノードが正しい記録を保持している状態が保たれます。これが「分散台帳」と呼ばれる理由です。 結 みんなで同じノートを持ってるってことか……それなら安心ですね！ 4. まとめと次章予告 江輝 中央集権型システムは一元管理がしやすい反面、単一障害点のリスクが高い。 分散型システムは可用性と冗長性に優れ、障害に強い構造を実現できる。 ブロックチェーンは分散型の仕組みを活かし、正確で改ざんが困難なデジタル台帳を提供する。 次章では、このブロックチェーン上で取引がどのように生成され、どのようにして新しいブロックとして台帳に追加されるのか、その一連の流れを体験的に学んでいきます。\n",
+  "wordCount" : "79",
+  "inLanguage": "ja",
+  "image":"https://welcomeblockchain.net/banner.webp","datePublished": "2025-06-16T08:00:00+09:00",
+  "dateModified": "2025-06-16T08:00:00+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://welcomeblockchain.net/beginner/what_is_blockchain/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ようこそ！ブロックチェーンの世界へ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://welcomeblockchain.net/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://welcomeblockchain.net/" accesskey="h" title="ようこそ！ブロックチェーンの世界へ (Alt + H)">ようこそ！ブロックチェーンの世界へ</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button id="menu-trigger" aria-haspopup="menu" aria-label="Menu Button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+        <ul class="menu hidden">
+            <li>
+                <a href="https://welcomeblockchain.net/beginner/" title="初級講座">
+                    <span>初級講座</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://welcomeblockchain.net/about/" title="運営者について">
+                    <span>運営者について</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://welcomeblockchain.net/privacy/" title="プライバシーポリシー">
+                    <span>プライバシーポリシー</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://welcomeblockchain.net/">ホーム</a>&nbsp;»&nbsp;<a href="https://welcomeblockchain.net/beginner/">初級ブロックチェーン講座</a></div>
+    <h1 class="post-title entry-hint-parent">
+      【初級】第1章：ブロックチェーンとは何か
+    </h1>
+    <div class="post-meta"><span title='2025-06-16 08:00:00 +0900 JST'>6月 16, 2025</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+            <img loading="eager"
+                srcset='https://welcomeblockchain.net/beginner/what_is_blockchain/banner_hu_e8e12fb63d4b31ea.webp 360w,https://welcomeblockchain.net/beginner/what_is_blockchain/banner_hu_968f618b9d6748f9.webp 480w,https://welcomeblockchain.net/beginner/what_is_blockchain/banner_hu_d68687d282f95d3f.webp 720w,https://welcomeblockchain.net/beginner/what_is_blockchain/banner_hu_a3cc586845a14bbc.webp 1080w,https://welcomeblockchain.net/beginner/what_is_blockchain/banner.webp 1200w'
+                src="https://welcomeblockchain.net/beginner/what_is_blockchain/banner.webp"
+                sizes="(min-width: 768px) 720px, 100vw"
+                width="1200" height="630"
+                alt="">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab" aria-label="はじめに">はじめに</a></li>
+                <li>
+                    <a href="#1-%e4%b8%ad%e5%a4%ae%e9%9b%86%e6%a8%a9%e5%9e%8b%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e7%89%b9%e5%be%b4%e3%81%a8%e8%aa%b2%e9%a1%8c" aria-label="1. 中央集権型システムの特徴と課題">1. 中央集権型システムの特徴と課題</a></li>
+                <li>
+                    <a href="#2-%e5%88%86%e6%95%a3%e5%9e%8b%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e6%a6%82%e5%bf%b5" aria-label="2. 分散型システムの概念">2. 分散型システムの概念</a></li>
+                <li>
+                    <a href="#3-%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%83%81%e3%82%a7%e3%83%bc%e3%83%b3%e3%81%8c%e5%ae%9f%e7%8f%be%e3%81%99%e3%82%8b%e5%88%86%e6%95%a3%e5%8f%b0%e5%b8%b3" aria-label="3. ブロックチェーンが実現する分散台帳">3. ブロックチェーンが実現する分散台帳</a></li>
+                <li>
+                    <a href="#4-%e3%81%be%e3%81%a8%e3%82%81%e3%81%a8%e6%ac%a1%e7%ab%a0%e4%ba%88%e5%91%8a" aria-label="4. まとめと次章予告">4. まとめと次章予告</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="はじめに">はじめに<a hidden class="anchor" aria-hidden="true" href="#はじめに">#</a></h2>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        この記事では、私と結さんが、中央集権型システムと分散型システム、そしてそれを応用したブロックチェーン技術について、対話形式でわかりやすく学んでいきます。まずは、インターネット上のデータ保存がどのように行われてきたか、基本的な仕組みから確認していきましょう。
+      </div>
+    </div>
+  </div>
+
+<h2 id="1-中央集権型システムの特徴と課題">1. 中央集権型システムの特徴と課題<a hidden class="anchor" aria-hidden="true" href="#1-中央集権型システムの特徴と課題">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        結さん、私たちが普段使っているネットサービスは、どこか一か所のサーバに情報が集まって管理されていることが多いのをご存知ですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        ええと……たとえばSNSとかネットショップとかですか？なんとなく、企業のサーバーで全部まとめて保存されてるイメージがあります。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        その通りです。このように、特定の企業や組織がすべてのデータと機能を集中管理する仕組みを「中央集権型システム（Centralized System）」と呼びます。システムの制御や判断が一つの場所に集約されていることで、管理がしやすい一方、トラブルに弱いという側面があります。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        どういうときにトラブルになっちゃうんですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        例えば、そのサーバーがハッキングされたり停電や機械トラブルで止まった場合、ユーザーはサービスを一切利用できなくなります。これを「単一障害点（Single Point of Failure）」と呼び、中央集権型の最大の弱点です。
+      </div>
+    </div>
+  </div>
+
+<figure class="rounded shadow-lg">
+    <img loading="lazy" src="centralized_system.webp"
+         alt="中央集権型システム" width="512" class="zoomable" 
+    /> <figcaption>
+            故障や攻撃で全サービスが停止しやすく、単一障害点が最大のリスクに
+        </figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_surprise_hu_d0c7b5ea5f021ec5.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        あ、全部一箇所に頼ってると、そこがダメになったら全部ダメになっちゃうんですね。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        まさにその通り。特に個人情報や金融データのような重要な情報が狙われやすい現代において、単一障害点を抱えることは大きなリスクになります。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        もちろん、現代の多くの企業サービスでは、サーバーの冗長構成やバックアップ体制、フェイルオーバー、CDNの活用など、障害への対策はしっかり取られています。それでも、極端な集中管理に依存する構造そのものにリスクが残るという点が、分散型の発想の出発点でもあるのです。
+      </div>
+    </div>
+  </div>
+
+<h2 id="2-分散型システムの概念">2. 分散型システムの概念<a hidden class="anchor" aria-hidden="true" href="#2-分散型システムの概念">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        こうした中央集権の問題点に対して考え出されたのが「分散型システム（Distributed System）」です。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        分散っていうと……データをバラバラにするんですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_smile_hu_a2c2d05cfe63a0f7.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        良い質問ですね。分散型では、複数のノード（コンピュータ）がネットワーク上で互いに連携しながら、全体の仕組みを動かします。データや処理を一か所に集めるのではなく、それぞれのノードが役割を持って、相互に情報をやりとりします。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        それなら、どこか1つのノードが止まっても、他のノードでカバーできそうですね！
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        そうです。これにより、可用性（Availability）や耐障害性が飛躍的に向上します。特に、ノード同士がP2P（ピア・ツー・ピア）でつながることで、中央管理者なしでも情報のやりとりや整合性の確認ができるようになります。
+      </div>
+    </div>
+  </div>
+
+<figure class="rounded shadow-lg">
+    <img loading="lazy" src="distributed_system.webp"
+         alt="分散型システム" width="512" class="zoomable" 
+    /> <figcaption>
+            故障や攻撃でノードが停止しても、他のノードでサービスを継続して提供できる
+        </figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        自動でお互いにチェックし合ってるような感じなんですね。なんか、チームワークって感じで頼もしいです。
+      </div>
+    </div>
+  </div>
+
+<h2 id="3-ブロックチェーンが実現する分散台帳">3. ブロックチェーンが実現する分散台帳<a hidden class="anchor" aria-hidden="true" href="#3-ブロックチェーンが実現する分散台帳">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        分散型システムをさらに発展させたものが、私たちが学ぼうとしている「ブロックチェーン」です。ブロックチェーンは、分散型ネットワーク上で正確な取引履歴を管理するための台帳（Ledger）のような仕組みです。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        台帳って、昔のお店で売上を記録してた帳簿みたいなものですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_smile_hu_a2c2d05cfe63a0f7.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        まさにそのイメージです。ブロックチェーンでは、取引データを「ブロック」という単位にまとめ、それぞれのブロックに「ハッシュ」という指紋のような値を付けて、鎖のように順番につなげて記録していきます。
+      </div>
+    </div>
+  </div>
+
+<figure class="rounded shadow-lg">
+    <img loading="lazy" src="blockchain_structure.webp"
+         alt="ブロックチェーンの基本構造" class="zoomable" 
+    /> <figcaption>
+            １つ前のブロックのハッシュ値をキーにして全てのブロックが１列に繋がっている
+        </figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        指紋？ハッシュってなんですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        ハッシュとは、任意のデータから固定長の文字列を作り出す関数のことです。特に次の3つの性質が、ブロックチェーンの安全性を支える重要なポイントとなっています。
+      </div>
+    </div>
+  </div>
+
+<table>
+  <thead>
+      <tr>
+          <th>性質</th>
+          <th>説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>一方向性</td>
+          <td>ハッシュ値から元のデータを復元することがほぼ不可能である</td>
+      </tr>
+      <tr>
+          <td>衝突耐性</td>
+          <td>異なる入力から同じハッシュ値が出る確率が極めて低い</td>
+      </tr>
+      <tr>
+          <td>高感度（Avalanche）</td>
+          <td>わずかな入力の違いでも、まったく異なるハッシュ値が生成される</td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        たとえば「block」と「blocks」のように、1文字違うだけでもまったく別のハッシュ値になります。これにより、過去の記録がほんの少しでも書き換えられると、すぐにそれが分かる仕組みになっているんです。
+      </div>
+    </div>
+  </div>
+
+<figure class="rounded shadow-lg">
+    <img loading="lazy" src="blockchain_tamper_resistance.webp"
+         alt="ブロックチェーンで改ざんが発生した際の動き" class="zoomable" 
+    /> <figcaption>
+            改ざんされたブロックはハッシュ値が変更されることにより、次のブロックとの連結が消失しチェーンから排除される
+        </figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        なるほど！ハッシュはデータが改ざんされていないことを確認するための指紋なんですね！そして、チェーンの途中を改ざんすると、次のブロックが持っている指紋と一致しないから、すぐバレちゃうんですね。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        さらに、ネットワーク上のすべてのノードがこのチェーン全体をコピーして保持しているため、誰か1人が不正をしても、他の多数のノードが正しい記録を保持している状態が保たれます。これが「分散台帳」と呼ばれる理由です。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        みんなで同じノートを持ってるってことか……それなら安心ですね！
+      </div>
+    </div>
+  </div>
+
+<h2 id="4-まとめと次章予告">4. まとめと次章予告<a hidden class="anchor" aria-hidden="true" href="#4-まとめと次章予告">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        <ul>
+<li>中央集権型システムは一元管理がしやすい反面、単一障害点のリスクが高い。</li>
+<li>分散型システムは可用性と冗長性に優れ、障害に強い構造を実現できる。</li>
+<li>ブロックチェーンは分散型の仕組みを活かし、正確で改ざんが困難なデジタル台帳を提供する。</li>
+</ul>
+<p>次章では、このブロックチェーン上で取引がどのように生成され、どのようにして新しいブロックとして台帳に追加されるのか、その一連の流れを体験的に学んでいきます。</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://welcomeblockchain.net/beginner/at_the_beginning/">
+    <span class="title">« 前へ</span>
+    <br>
+    <span>【初級】ブロックチェーン講座について</span>
+  </a>
+  <a class="next" href="https://welcomeblockchain.net/beginner/blockchain_action/">
+    <span class="title">次へ »</span>
+    <br>
+    <span>【初級】第2章：ブロックチェーンはどう動くのか</span>
+  </a>
+</nav>
+
+  </footer>
+
+
+
+
+
+
+<div class="comment-section">
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/sakai_normal.webp" alt="鎖塊" loading="lazy" style="width:80px;height:80px">
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0FFD080;--talk-color-dark: #041F0480">
+      <div class="talk-text">
+        ご意見・ご感想をXのポストにリプライしていただけると励みになります。
+        <a href="https://twitter.com/tomoyosi_sakai/status/1234567890123456789" target="_blank" rel="noopener noreferrer">
+            🗨️ コメントする（Xのポストへ）
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://welcomeblockchain.net/">ようこそ！ブロックチェーンの世界へ</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script>
+  mediumZoom('.zoomable', {
+    background: 'rgba(0, 0, 0, 0.8)',
+    margin: 24
+  });
+</script>
+
+<script language="javascript" type="text/javascript" src="https://welcomeblockchain.net/menu_trigger.min.aa0f772e61a331c8fc9605144a42cd7b04abce776a74690c1127a739dbfe60cd.js"></script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+    
+    
+</body>
+
+</html>

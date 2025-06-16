@@ -1,0 +1,2744 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>【初級】第2章：ブロックチェーンはどう動くのか | ようこそ！ブロックチェーンの世界へ</title>
+<meta name="keywords" content="ブロックチェーン, ビットコイン, 初心者向け, 入門, プルーフオブワーク, UTXO">
+<meta name="description" content="1. はじめに
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        前回、ブロックチェーンって「みんなで同じノートを持ってる」って聞いて安心したんですけど…そのノートって、どうやって書かれていくんですか？ブロックって「チェーン状に並んでて、それぞれ前のハッシュを覚えてる」っていう仕組みでしたよね？それがどうやって動くのか気になります。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        ブロックチェーンの仕組みについて興味を持ってくれたようでなによりです。今回の記事では、代表的なブロックチェーンであるビットコインのネットワークを題材にして、取引がどのように処理され、記録されていくのかを順を追って学びましょう。
+      
+    
+  
+
+2. 取引（トランザクション）のはじまり
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        ビットコインを送るって、誰かが誰かに通貨を移すってことですよね？でも、実際にどういう手順で送るんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        いい質問ですね。ビットコインでの送金や受け取りといった記録は「トランザクション」と呼ばれます。トランザクションとは、過去に受け取ったビットコインを使って、新たな送り先に送金するという命令書のようなものです。次の図を見てください。
+      
+    
+  
+
+
+     
+            ※簡略化のため、送金手数料の記載を省略しています。
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        まずユーザーは、送りたい相手のアドレスと金額を指定します。そして、自分が過去に受け取ってまだ使っていないビットコイン（UTXO）を入力として選び、それらをまとめてトランザクションを構成します。この図では、私が過去に受け取った1.0BTCのうち、0.8BTCを結さんに送金し、残りを私に戻すトランザクションを作成しています。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        このとき、自分が正当な持ち主であることを証明するために入力側に「電子署名」を行います。これは、自分の秘密鍵で取引内容に署名することで、誰でもその署名が正しいかを確認できる仕組みです。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        電子署名って、「この取引は私がやりました」って証明する仕組みなんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        その通りです。電子署名があることで、そのトランザクションが本人によるものであり、かつ途中で改ざんされていないことも保証できます。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        署名されたトランザクションはネットワークに送られ、周囲のノードたちがそれを受け取ります。ノードは署名や残高、二重支払いの有無などを確認し、問題がなければその取引を未承認トランザクションとしてプールに保管します。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        未承認ということは、この後誰かが承認をするということですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        はい。そして、このトランザクションの承認プロセスがビットコインの安全性を支える上で非常に重要な要素となっています。
+      
+    
+  
+
+3. ノードによる検証とブロック化
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        トランザクションを受け取ったノードは、どうやってその取引が本当に正しいものか判断するんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        前節でもお話したように、主に3つのポイントを確認します。まずは電子署名が正しく、自分のアドレスの秘密鍵から発行されたものであること。次に、送信者が実際にその金額分の未使用コイン（UTXO）を持っているか。そして、同じコインが別の取引にも使われていないか、つまり二重支払いのチェックです。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        なるほど…たしかに、それを見落としたら不正が起きちゃいますもんね。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        そうなんです。そして、こうして検証された未承認トランザクションは一時的にノードに保管され、マイナーと呼ばれるノードたちによってブロックにまとめられていきます。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        ビットコインでは、おおよそ10分に1回のペースで新しいブロックが作られます。マイナーは、未承認トランザクションの中からいくつかを選び、1つのブロックにまとめたうえで、一定の条件を満たすハッシュ値を見つけるという「計算競争（マイニング）」に挑戦します。次の図を見てください。
+      
+    
+  
+
+
+     
+            ※簡略化のため、ブロックに含まれる情報の一部を省略しています。
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        なんかちょっと複雑な感じの図ですね…
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        少し複雑に見えるかもしれませんが、ここはビットコインの安全性を支える非常に重要な部分です。ぜひ理解しておきましょう。前回の講義で、新しいブロックをチェーンにつなぐキーが、直前のブロックのハッシュ値であることを説明しましたね。
+      
+    
+  
+">
+<meta name="author" content="">
+<link rel="canonical" href="https://welcomeblockchain.net/beginner/blockchain_action/">
+<meta name="google-site-verification" content="G-J9QJEK90RZ">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9a39811af7a00a1eba8d8da420a79ff30e30f3bcc3f39b2a85d2fa3ae781a85d.css" integrity="sha256-mjmBGvegCh66jY2kIKef8w4w87zD85sqhdL6OueBqF0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://welcomeblockchain.net/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://welcomeblockchain.net/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://welcomeblockchain.net/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://welcomeblockchain.net/apple-touch-icon.png">
+<link rel="mask-icon" href="https://welcomeblockchain.net/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ja" href="https://welcomeblockchain.net/beginner/blockchain_action/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /><meta property="og:url" content="https://welcomeblockchain.net/beginner/blockchain_action/">
+  <meta property="og:site_name" content="ようこそ！ブロックチェーンの世界へ">
+  <meta property="og:title" content="【初級】第2章：ブロックチェーンはどう動くのか">
+  <meta property="og:description" content="1. はじめに 結 前回、ブロックチェーンって「みんなで同じノートを持ってる」って聞いて安心したんですけど…そのノートって、どうやって書かれていくんですか？ブロックって「チェーン状に並んでて、それぞれ前のハッシュを覚えてる」っていう仕組みでしたよね？それがどうやって動くのか気になります。 江輝 ブロックチェーンの仕組みについて興味を持ってくれたようでなによりです。今回の記事では、代表的なブロックチェーンであるビットコインのネットワークを題材にして、取引がどのように処理され、記録されていくのかを順を追って学びましょう。 2. 取引（トランザクション）のはじまり 結 ビットコインを送るって、誰かが誰かに通貨を移すってことですよね？でも、実際にどういう手順で送るんですか？ 江輝 いい質問ですね。ビットコインでの送金や受け取りといった記録は「トランザクション」と呼ばれます。トランザクションとは、過去に受け取ったビットコインを使って、新たな送り先に送金するという命令書のようなものです。次の図を見てください。 ※簡略化のため、送金手数料の記載を省略しています。 江輝 まずユーザーは、送りたい相手のアドレスと金額を指定します。そして、自分が過去に受け取ってまだ使っていないビットコイン（UTXO）を入力として選び、それらをまとめてトランザクションを構成します。この図では、私が過去に受け取った1.0BTCのうち、0.8BTCを結さんに送金し、残りを私に戻すトランザクションを作成しています。 江輝 このとき、自分が正当な持ち主であることを証明するために入力側に「電子署名」を行います。これは、自分の秘密鍵で取引内容に署名することで、誰でもその署名が正しいかを確認できる仕組みです。 結 電子署名って、「この取引は私がやりました」って証明する仕組みなんですか？ 江輝 その通りです。電子署名があることで、そのトランザクションが本人によるものであり、かつ途中で改ざんされていないことも保証できます。 江輝 署名されたトランザクションはネットワークに送られ、周囲のノードたちがそれを受け取ります。ノードは署名や残高、二重支払いの有無などを確認し、問題がなければその取引を未承認トランザクションとしてプールに保管します。 結 未承認ということは、この後誰かが承認をするということですか？ 江輝 はい。そして、このトランザクションの承認プロセスがビットコインの安全性を支える上で非常に重要な要素となっています。 3. ノードによる検証とブロック化 結 トランザクションを受け取ったノードは、どうやってその取引が本当に正しいものか判断するんですか？ 江輝 前節でもお話したように、主に3つのポイントを確認します。まずは電子署名が正しく、自分のアドレスの秘密鍵から発行されたものであること。次に、送信者が実際にその金額分の未使用コイン（UTXO）を持っているか。そして、同じコインが別の取引にも使われていないか、つまり二重支払いのチェックです。 結 なるほど…たしかに、それを見落としたら不正が起きちゃいますもんね。 江輝 そうなんです。そして、こうして検証された未承認トランザクションは一時的にノードに保管され、マイナーと呼ばれるノードたちによってブロックにまとめられていきます。 江輝 ビットコインでは、おおよそ10分に1回のペースで新しいブロックが作られます。マイナーは、未承認トランザクションの中からいくつかを選び、1つのブロックにまとめたうえで、一定の条件を満たすハッシュ値を見つけるという「計算競争（マイニング）」に挑戦します。次の図を見てください。 ※簡略化のため、ブロックに含まれる情報の一部を省略しています。 結 なんかちょっと複雑な感じの図ですね… 江輝 少し複雑に見えるかもしれませんが、ここはビットコインの安全性を支える非常に重要な部分です。ぜひ理解しておきましょう。前回の講義で、新しいブロックをチェーンにつなぐキーが、直前のブロックのハッシュ値であることを説明しましたね。 ">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="beginner">
+    <meta property="article:published_time" content="2025-06-16T08:00:00+09:00">
+    <meta property="article:modified_time" content="2025-06-16T08:00:00+09:00">
+    <meta property="og:image" content="https://welcomeblockchain.net/banner.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://welcomeblockchain.net/banner.webp">
+<meta name="twitter:title" content="【初級】第2章：ブロックチェーンはどう動くのか">
+<meta name="twitter:description" content="1. はじめに
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        前回、ブロックチェーンって「みんなで同じノートを持ってる」って聞いて安心したんですけど…そのノートって、どうやって書かれていくんですか？ブロックって「チェーン状に並んでて、それぞれ前のハッシュを覚えてる」っていう仕組みでしたよね？それがどうやって動くのか気になります。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        ブロックチェーンの仕組みについて興味を持ってくれたようでなによりです。今回の記事では、代表的なブロックチェーンであるビットコインのネットワークを題材にして、取引がどのように処理され、記録されていくのかを順を追って学びましょう。
+      
+    
+  
+
+2. 取引（トランザクション）のはじまり
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        ビットコインを送るって、誰かが誰かに通貨を移すってことですよね？でも、実際にどういう手順で送るんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        いい質問ですね。ビットコインでの送金や受け取りといった記録は「トランザクション」と呼ばれます。トランザクションとは、過去に受け取ったビットコインを使って、新たな送り先に送金するという命令書のようなものです。次の図を見てください。
+      
+    
+  
+
+
+     
+            ※簡略化のため、送金手数料の記載を省略しています。
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        まずユーザーは、送りたい相手のアドレスと金額を指定します。そして、自分が過去に受け取ってまだ使っていないビットコイン（UTXO）を入力として選び、それらをまとめてトランザクションを構成します。この図では、私が過去に受け取った1.0BTCのうち、0.8BTCを結さんに送金し、残りを私に戻すトランザクションを作成しています。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        このとき、自分が正当な持ち主であることを証明するために入力側に「電子署名」を行います。これは、自分の秘密鍵で取引内容に署名することで、誰でもその署名が正しいかを確認できる仕組みです。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        電子署名って、「この取引は私がやりました」って証明する仕組みなんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        その通りです。電子署名があることで、そのトランザクションが本人によるものであり、かつ途中で改ざんされていないことも保証できます。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        署名されたトランザクションはネットワークに送られ、周囲のノードたちがそれを受け取ります。ノードは署名や残高、二重支払いの有無などを確認し、問題がなければその取引を未承認トランザクションとしてプールに保管します。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        未承認ということは、この後誰かが承認をするということですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        はい。そして、このトランザクションの承認プロセスがビットコインの安全性を支える上で非常に重要な要素となっています。
+      
+    
+  
+
+3. ノードによる検証とブロック化
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        トランザクションを受け取ったノードは、どうやってその取引が本当に正しいものか判断するんですか？
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        前節でもお話したように、主に3つのポイントを確認します。まずは電子署名が正しく、自分のアドレスの秘密鍵から発行されたものであること。次に、送信者が実際にその金額分の未使用コイン（UTXO）を持っているか。そして、同じコインが別の取引にも使われていないか、つまり二重支払いのチェックです。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        なるほど…たしかに、それを見落としたら不正が起きちゃいますもんね。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        そうなんです。そして、こうして検証された未承認トランザクションは一時的にノードに保管され、マイナーと呼ばれるノードたちによってブロックにまとめられていきます。
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        ビットコインでは、おおよそ10分に1回のペースで新しいブロックが作られます。マイナーは、未承認トランザクションの中からいくつかを選び、1つのブロックにまとめたうえで、一定の条件を満たすハッシュ値を見つけるという「計算競争（マイニング）」に挑戦します。次の図を見てください。
+      
+    
+  
+
+
+     
+            ※簡略化のため、ブロックに含まれる情報の一部を省略しています。
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+      
+      結
+    
+    
+      
+        なんかちょっと複雑な感じの図ですね…
+      
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+      
+      江輝
+    
+    
+      
+        少し複雑に見えるかもしれませんが、ここはビットコインの安全性を支える非常に重要な部分です。ぜひ理解しておきましょう。前回の講義で、新しいブロックをチェーンにつなぐキーが、直前のブロックのハッシュ値であることを説明しましたね。
+      
+    
+  
+">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "初級ブロックチェーン講座",
+      "item": "https://welcomeblockchain.net/beginner/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "【初級】第2章：ブロックチェーンはどう動くのか",
+      "item": "https://welcomeblockchain.net/beginner/blockchain_action/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "【初級】第2章：ブロックチェーンはどう動くのか",
+  "name": "【初級】第2章：ブロックチェーンはどう動くのか",
+  "description": "1. はじめに 結 前回、ブロックチェーンって「みんなで同じノートを持ってる」って聞いて安心したんですけど…そのノートって、どうやって書かれていくんですか？ブロックって「チェーン状に並んでて、それぞれ前のハッシュを覚えてる」っていう仕組みでしたよね？それがどうやって動くのか気になります。 江輝 ブロックチェーンの仕組みについて興味を持ってくれたようでなによりです。今回の記事では、代表的なブロックチェーンであるビットコインのネットワークを題材にして、取引がどのように処理され、記録されていくのかを順を追って学びましょう。 2. 取引（トランザクション）のはじまり 結 ビットコインを送るって、誰かが誰かに通貨を移すってことですよね？でも、実際にどういう手順で送るんですか？ 江輝 いい質問ですね。ビットコインでの送金や受け取りといった記録は「トランザクション」と呼ばれます。トランザクションとは、過去に受け取ったビットコインを使って、新たな送り先に送金するという命令書のようなものです。次の図を見てください。 ※簡略化のため、送金手数料の記載を省略しています。 江輝 まずユーザーは、送りたい相手のアドレスと金額を指定します。そして、自分が過去に受け取ってまだ使っていないビットコイン（UTXO）を入力として選び、それらをまとめてトランザクションを構成します。この図では、私が過去に受け取った1.0BTCのうち、0.8BTCを結さんに送金し、残りを私に戻すトランザクションを作成しています。 江輝 このとき、自分が正当な持ち主であることを証明するために入力側に「電子署名」を行います。これは、自分の秘密鍵で取引内容に署名することで、誰でもその署名が正しいかを確認できる仕組みです。 結 電子署名って、「この取引は私がやりました」って証明する仕組みなんですか？ 江輝 その通りです。電子署名があることで、そのトランザクションが本人によるものであり、かつ途中で改ざんされていないことも保証できます。 江輝 署名されたトランザクションはネットワークに送られ、周囲のノードたちがそれを受け取ります。ノードは署名や残高、二重支払いの有無などを確認し、問題がなければその取引を未承認トランザクションとしてプールに保管します。 結 未承認ということは、この後誰かが承認をするということですか？ 江輝 はい。そして、このトランザクションの承認プロセスがビットコインの安全性を支える上で非常に重要な要素となっています。 3. ノードによる検証とブロック化 結 トランザクションを受け取ったノードは、どうやってその取引が本当に正しいものか判断するんですか？ 江輝 前節でもお話したように、主に3つのポイントを確認します。まずは電子署名が正しく、自分のアドレスの秘密鍵から発行されたものであること。次に、送信者が実際にその金額分の未使用コイン（UTXO）を持っているか。そして、同じコインが別の取引にも使われていないか、つまり二重支払いのチェックです。 結 なるほど…たしかに、それを見落としたら不正が起きちゃいますもんね。 江輝 そうなんです。そして、こうして検証された未承認トランザクションは一時的にノードに保管され、マイナーと呼ばれるノードたちによってブロックにまとめられていきます。 江輝 ビットコインでは、おおよそ10分に1回のペースで新しいブロックが作られます。マイナーは、未承認トランザクションの中からいくつかを選び、1つのブロックにまとめたうえで、一定の条件を満たすハッシュ値を見つけるという「計算競争（マイニング）」に挑戦します。次の図を見てください。 ※簡略化のため、ブロックに含まれる情報の一部を省略しています。 結 なんかちょっと複雑な感じの図ですね… 江輝 少し複雑に見えるかもしれませんが、ここはビットコインの安全性を支える非常に重要な部分です。ぜひ理解しておきましょう。前回の講義で、新しいブロックをチェーンにつなぐキーが、直前のブロックのハッシュ値であることを説明しましたね。 ",
+  "keywords": [
+    "ブロックチェーン", "ビットコイン", "初心者向け", "入門", "プルーフオブワーク", "UTXO"
+  ],
+  "articleBody": "1. はじめに 結 前回、ブロックチェーンって「みんなで同じノートを持ってる」って聞いて安心したんですけど…そのノートって、どうやって書かれていくんですか？ブロックって「チェーン状に並んでて、それぞれ前のハッシュを覚えてる」っていう仕組みでしたよね？それがどうやって動くのか気になります。 江輝 ブロックチェーンの仕組みについて興味を持ってくれたようでなによりです。今回の記事では、代表的なブロックチェーンであるビットコインのネットワークを題材にして、取引がどのように処理され、記録されていくのかを順を追って学びましょう。 2. 取引（トランザクション）のはじまり 結 ビットコインを送るって、誰かが誰かに通貨を移すってことですよね？でも、実際にどういう手順で送るんですか？ 江輝 いい質問ですね。ビットコインでの送金や受け取りといった記録は「トランザクション」と呼ばれます。トランザクションとは、過去に受け取ったビットコインを使って、新たな送り先に送金するという命令書のようなものです。次の図を見てください。 ※簡略化のため、送金手数料の記載を省略しています。 江輝 まずユーザーは、送りたい相手のアドレスと金額を指定します。そして、自分が過去に受け取ってまだ使っていないビットコイン（UTXO）を入力として選び、それらをまとめてトランザクションを構成します。この図では、私が過去に受け取った1.0BTCのうち、0.8BTCを結さんに送金し、残りを私に戻すトランザクションを作成しています。 江輝 このとき、自分が正当な持ち主であることを証明するために入力側に「電子署名」を行います。これは、自分の秘密鍵で取引内容に署名することで、誰でもその署名が正しいかを確認できる仕組みです。 結 電子署名って、「この取引は私がやりました」って証明する仕組みなんですか？ 江輝 その通りです。電子署名があることで、そのトランザクションが本人によるものであり、かつ途中で改ざんされていないことも保証できます。 江輝 署名されたトランザクションはネットワークに送られ、周囲のノードたちがそれを受け取ります。ノードは署名や残高、二重支払いの有無などを確認し、問題がなければその取引を未承認トランザクションとしてプールに保管します。 結 未承認ということは、この後誰かが承認をするということですか？ 江輝 はい。そして、このトランザクションの承認プロセスがビットコインの安全性を支える上で非常に重要な要素となっています。 3. ノードによる検証とブロック化 結 トランザクションを受け取ったノードは、どうやってその取引が本当に正しいものか判断するんですか？ 江輝 前節でもお話したように、主に3つのポイントを確認します。まずは電子署名が正しく、自分のアドレスの秘密鍵から発行されたものであること。次に、送信者が実際にその金額分の未使用コイン（UTXO）を持っているか。そして、同じコインが別の取引にも使われていないか、つまり二重支払いのチェックです。 結 なるほど…たしかに、それを見落としたら不正が起きちゃいますもんね。 江輝 そうなんです。そして、こうして検証された未承認トランザクションは一時的にノードに保管され、マイナーと呼ばれるノードたちによってブロックにまとめられていきます。 江輝 ビットコインでは、おおよそ10分に1回のペースで新しいブロックが作られます。マイナーは、未承認トランザクションの中からいくつかを選び、1つのブロックにまとめたうえで、一定の条件を満たすハッシュ値を見つけるという「計算競争（マイニング）」に挑戦します。次の図を見てください。 ※簡略化のため、ブロックに含まれる情報の一部を省略しています。 結 なんかちょっと複雑な感じの図ですね… 江輝 少し複雑に見えるかもしれませんが、ここはビットコインの安全性を支える非常に重要な部分です。ぜひ理解しておきましょう。前回の講義で、新しいブロックをチェーンにつなぐキーが、直前のブロックのハッシュ値であることを説明しましたね。 結 はい、その仕組みによって、ブロックの改ざんを簡単に検知できるというお話でした。 江輝 その通りです。ここで重要なのは、単なるハッシュ値ではなく、一定の条件を満たすハッシュ値であることです。例えば、0〜1000の間の値を返すハッシュ関数があるとしましょう。ブロック候補の情報をこの関数にかけると、0〜1000のほぼランダムな値が出力されます。このとき、「その値が10以下でなければならない」といった条件を加えるのです。 結 なぜ、そのような制限を加えるのでしょうか？ 江輝 それは、次のブロックを接続するためのキーとなるハッシュ値の計算コストを意図的に高くするためです。実は、現代のコンピュータなら単純なハッシュ計算は一瞬で終わってしまいます。もし、そのキーが一瞬で求められるとしたら、どんな問題が起こると思いますか？ 結 えーっと……ブロックチェーン上のたくさんのブロックのハッシュ値を一気に書き換えて、記録の改ざんができてしまうかも！？ 江輝 まさに、その通りです。ハッシュ値をキーにしてブロックをつなぐことで、チェーン全体の改ざんを難しくしているわけですが、それが機能するにはハッシュの計算に一定の手間がかかる必要があるのです。だからこそ、条件を満たすハッシュ値（＝正解）を見つけるには、大量の計算を行う、つまり「マイニング」が必要になるというわけですね。 結 でも、ハッシュ関数の結果って、ブロックの情報が変わらない限りは同じではないのでしょうか？ 江輝 鋭いですね。ハッシュ関数は、入力が同じであれば常に同じ出力になります。ですから、出力値を変えるには入力のどこかを変える必要があります。そこで使われるのが、ブロック内に含まれる「ナンス値」と呼ばれるものです。この値を変更する(1ずつ増やす)ことで、ブロック内の他の重要な情報を変えずに、ハッシュ関数の結果を変えることができるのです。 結 ナンス値ってなんなのかと思っていましたが、そんな役割があったんですね！ 江輝 この仕組みは「プルーフ・オブ・ワーク（PoW）」と呼ばれます。膨大な計算力を使って、最初に条件を満たすハッシュを見つけたマイナーが、そのブロックの作成者として認められ、報酬を得られるのです。ちなみに、2025年現在のビットコインマイニングのハッシュレート（1秒間に実行されるハッシュ計算の回数）はおよそ10²¹回と言われています。この計算により消費される電力は非常に大きく、ある調査では、中規模国家（アルゼンチンなど）の消費電力量に匹敵すると言われています。 結 う…数字が大きすぎて想像もできないです。。 4. ノード間の同期と分散台帳 結 マイナーがブロックを作ったら、その情報はどうやって他のノードに伝わるんですか？ 江輝 ブロックが完成すると、マイナーはその情報をネットワーク全体に伝播させます。各ノードは新しいブロックを受け取ると、自分のチェーンの最後に追加して、最新の状態を維持します。 結 でも先生、もし別々のマイナーが同時に違うブロックを作ってしまったらどうなるんですか？ 江輝 それは「フォーク」と呼ばれる状態です。ノードは一時的に分岐したチェーンの両方を追跡しますが、次に追加されるブロックによって長さが違ってくると、より長くなったチェーンが正しいとみなされて採用されます。次の図のようなイメージです。 チェーンがフォークした場合、先に長くなった枝が正しいとみなされ、短い枝につくブロックはチェーンから外れる。 結 ちゃんと調整して1本に戻すんですね！分散してても協力してるって感じがします！ 江輝 ちなみに「トランザクションがいつ確定したとみなされるのか」といった話題もありますが、これはもう少し複雑な内容になりますので、今回は触れずにおきましょう。今は「ブロックに取り込まれ、ネットワークで共有された時点で一通りの処理は終わる」と理解しておけば十分です。 5. まとめと次章予告 結 今回は、ビットコインの中で「どうやって記録が作られ、守られているのか」がすごくよく分かりました！ 江輝 今回の学習内容をまとめると以下のような内容になります。\nユーザーはトランザクションを作り、電子署名をしてネットワークに送信する ノードはその取引を検証し、マイナーがブロックにまとめてマイニングを行う ネットワーク全体でブロックが共有され、台帳が同期される 次回は、ブロックチェーンの仕組みがどのように社会で活用されているかを見ていきましょう。ビットコインをはじめとした暗号通貨のしくみや、ゲーム・デジタルアートにおけるNFTのような身近な事例を通じて、ブロックチェーン技術が私たちの生活にどんな役割を果たしているのかを学びます。\n結 実際に使われてる場面を知れるって、なんだかワクワクします！ ",
+  "wordCount" : "93",
+  "inLanguage": "ja",
+  "image":"https://welcomeblockchain.net/banner.webp","datePublished": "2025-06-16T08:00:00+09:00",
+  "dateModified": "2025-06-16T08:00:00+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://welcomeblockchain.net/beginner/blockchain_action/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ようこそ！ブロックチェーンの世界へ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://welcomeblockchain.net/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://welcomeblockchain.net/" accesskey="h" title="ようこそ！ブロックチェーンの世界へ (Alt + H)">ようこそ！ブロックチェーンの世界へ</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button id="menu-trigger" aria-haspopup="menu" aria-label="Menu Button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+        <ul class="menu hidden">
+            <li>
+                <a href="https://welcomeblockchain.net/beginner/" title="初級講座">
+                    <span>初級講座</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://welcomeblockchain.net/about/" title="運営者について">
+                    <span>運営者について</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://welcomeblockchain.net/privacy/" title="プライバシーポリシー">
+                    <span>プライバシーポリシー</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://welcomeblockchain.net/">ホーム</a>&nbsp;»&nbsp;<a href="https://welcomeblockchain.net/beginner/">初級ブロックチェーン講座</a></div>
+    <h1 class="post-title entry-hint-parent">
+      【初級】第2章：ブロックチェーンはどう動くのか
+    </h1>
+    <div class="post-meta"><span title='2025-06-16 08:00:00 +0900 JST'>6月 16, 2025</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+            <img loading="eager"
+                srcset='https://welcomeblockchain.net/beginner/blockchain_action/banner_hu_d843977560d951d5.webp 360w,https://welcomeblockchain.net/beginner/blockchain_action/banner_hu_2af284bf434ca61e.webp 480w,https://welcomeblockchain.net/beginner/blockchain_action/banner_hu_4dd5ebfd54e8542a.webp 720w,https://welcomeblockchain.net/beginner/blockchain_action/banner_hu_feb20ac84dd14064.webp 1080w,https://welcomeblockchain.net/beginner/blockchain_action/banner.webp 1200w'
+                src="https://welcomeblockchain.net/beginner/blockchain_action/banner.webp"
+                sizes="(min-width: 768px) 720px, 100vw"
+                width="1200" height="630"
+                alt="">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-%e3%81%af%e3%81%98%e3%82%81%e3%81%ab" aria-label="1. はじめに">1. はじめに</a></li>
+                <li>
+                    <a href="#2-%e5%8f%96%e5%bc%95%e3%83%88%e3%83%a9%e3%83%b3%e3%82%b6%e3%82%af%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e3%81%af%e3%81%98%e3%81%be%e3%82%8a" aria-label="2. 取引（トランザクション）のはじまり">2. 取引（トランザクション）のはじまり</a></li>
+                <li>
+                    <a href="#3-%e3%83%8e%e3%83%bc%e3%83%89%e3%81%ab%e3%82%88%e3%82%8b%e6%a4%9c%e8%a8%bc%e3%81%a8%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e5%8c%96" aria-label="3. ノードによる検証とブロック化">3. ノードによる検証とブロック化</a></li>
+                <li>
+                    <a href="#4-%e3%83%8e%e3%83%bc%e3%83%89%e9%96%93%e3%81%ae%e5%90%8c%e6%9c%9f%e3%81%a8%e5%88%86%e6%95%a3%e5%8f%b0%e5%b8%b3" aria-label="4. ノード間の同期と分散台帳">4. ノード間の同期と分散台帳</a></li>
+                <li>
+                    <a href="#5-%e3%81%be%e3%81%a8%e3%82%81%e3%81%a8%e6%ac%a1%e7%ab%a0%e4%ba%88%e5%91%8a" aria-label="5. まとめと次章予告">5. まとめと次章予告</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="1-はじめに">1. はじめに<a hidden class="anchor" aria-hidden="true" href="#1-はじめに">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        前回、ブロックチェーンって「みんなで同じノートを持ってる」って聞いて安心したんですけど…そのノートって、どうやって書かれていくんですか？ブロックって「チェーン状に並んでて、それぞれ前のハッシュを覚えてる」っていう仕組みでしたよね？それがどうやって動くのか気になります。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_smile_hu_a2c2d05cfe63a0f7.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        ブロックチェーンの仕組みについて興味を持ってくれたようでなによりです。今回の記事では、代表的なブロックチェーンであるビットコインのネットワークを題材にして、取引がどのように処理され、記録されていくのかを順を追って学びましょう。
+      </div>
+    </div>
+  </div>
+
+<h2 id="2-取引トランザクションのはじまり">2. 取引（トランザクション）のはじまり<a hidden class="anchor" aria-hidden="true" href="#2-取引トランザクションのはじまり">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        ビットコインを送るって、誰かが誰かに通貨を移すってことですよね？でも、実際にどういう手順で送るんですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        いい質問ですね。ビットコインでの送金や受け取りといった記録は「トランザクション」と呼ばれます。トランザクションとは、過去に受け取ったビットコインを使って、新たな送り先に送金するという命令書のようなものです。次の図を見てください。
+      </div>
+    </div>
+  </div>
+
+<figure class="rounded shadow-lg">
+    <img loading="lazy" src="bitcoin_transaction.webp"
+         alt="ビットコイン送金時のトランザクション" class="zoomable" 
+    /> <figcaption>
+            ※簡略化のため、送金手数料の記載を省略しています。
+        </figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        まずユーザーは、送りたい相手のアドレスと金額を指定します。そして、自分が過去に受け取ってまだ使っていないビットコイン（UTXO）を入力として選び、それらをまとめてトランザクションを構成します。この図では、私が過去に受け取った1.0BTCのうち、0.8BTCを結さんに送金し、残りを私に戻すトランザクションを作成しています。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        このとき、自分が正当な持ち主であることを証明するために入力側に「電子署名」を行います。これは、自分の秘密鍵で取引内容に署名することで、誰でもその署名が正しいかを確認できる仕組みです。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        電子署名って、「この取引は私がやりました」って証明する仕組みなんですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        その通りです。電子署名があることで、そのトランザクションが本人によるものであり、かつ途中で改ざんされていないことも保証できます。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        署名されたトランザクションはネットワークに送られ、周囲のノードたちがそれを受け取ります。ノードは署名や残高、二重支払いの有無などを確認し、問題がなければその取引を未承認トランザクションとしてプールに保管します。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        未承認ということは、この後誰かが承認をするということですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        はい。そして、このトランザクションの承認プロセスがビットコインの安全性を支える上で非常に重要な要素となっています。
+      </div>
+    </div>
+  </div>
+
+<h2 id="3-ノードによる検証とブロック化">3. ノードによる検証とブロック化<a hidden class="anchor" aria-hidden="true" href="#3-ノードによる検証とブロック化">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        トランザクションを受け取ったノードは、どうやってその取引が本当に正しいものか判断するんですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        前節でもお話したように、主に3つのポイントを確認します。まずは電子署名が正しく、自分のアドレスの秘密鍵から発行されたものであること。次に、送信者が実際にその金額分の未使用コイン（UTXO）を持っているか。そして、同じコインが別の取引にも使われていないか、つまり二重支払いのチェックです。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        なるほど…たしかに、それを見落としたら不正が起きちゃいますもんね。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_smile_hu_a2c2d05cfe63a0f7.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        そうなんです。そして、こうして検証された未承認トランザクションは一時的にノードに保管され、マイナーと呼ばれるノードたちによってブロックにまとめられていきます。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        ビットコインでは、おおよそ10分に1回のペースで新しいブロックが作られます。マイナーは、未承認トランザクションの中からいくつかを選び、1つのブロックにまとめたうえで、一定の条件を満たすハッシュ値を見つけるという「計算競争（マイニング）」に挑戦します。次の図を見てください。
+      </div>
+    </div>
+  </div>
+
+<figure class="rounded shadow-lg">
+    <img loading="lazy" src="bitcoin_mining.webp"
+         alt="マイニング時のマイナーの動作" class="zoomable" 
+    /> <figcaption>
+            ※簡略化のため、ブロックに含まれる情報の一部を省略しています。
+        </figcaption>
+</figure>
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        なんかちょっと複雑な感じの図ですね…
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        少し複雑に見えるかもしれませんが、ここはビットコインの安全性を支える非常に重要な部分です。ぜひ理解しておきましょう。前回の講義で、新しいブロックをチェーンにつなぐキーが、直前のブロックのハッシュ値であることを説明しましたね。
+      </div>
+    </div>
+  </div>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        はい、その仕組みによって、ブロックの改ざんを簡単に検知できるというお話でした。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        その通りです。ここで重要なのは、単なるハッシュ値ではなく、<strong>一定の条件を満たすハッシュ値</strong>であることです。例えば、0〜1000の間の値を返すハッシュ関数があるとしましょう。ブロック候補の情報をこの関数にかけると、0〜1000のほぼランダムな値が出力されます。このとき、「その値が10以下でなければならない」といった条件を加えるのです。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        なぜ、そのような制限を加えるのでしょうか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        それは、次のブロックを接続するためのキーとなるハッシュ値の<strong>計算コストを意図的に高くするため</strong>です。実は、現代のコンピュータなら単純なハッシュ計算は一瞬で終わってしまいます。もし、そのキーが一瞬で求められるとしたら、どんな問題が起こると思いますか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        えーっと……ブロックチェーン上のたくさんのブロックのハッシュ値を一気に書き換えて、記録の改ざんができてしまうかも！？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        まさに、その通りです。ハッシュ値をキーにしてブロックをつなぐことで、チェーン全体の改ざんを難しくしているわけですが、それが機能するには<strong>ハッシュの計算に一定の手間がかかる</strong>必要があるのです。だからこそ、条件を満たすハッシュ値（＝正解）を見つけるには、大量の計算を行う、つまり「マイニング」が必要になるというわけですね。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        でも、ハッシュ関数の結果って、ブロックの情報が変わらない限りは同じではないのでしょうか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        鋭いですね。ハッシュ関数は、入力が同じであれば常に同じ出力になります。ですから、出力値を変えるには入力のどこかを変える必要があります。そこで使われるのが、ブロック内に含まれる「<strong>ナンス値</strong>」と呼ばれるものです。この値を変更する(1ずつ増やす)ことで、ブロック内の他の重要な情報を変えずに、ハッシュ関数の結果を変えることができるのです。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        ナンス値ってなんなのかと思っていましたが、そんな役割があったんですね！
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        この仕組みは「プルーフ・オブ・ワーク（PoW）」と呼ばれます。膨大な計算力を使って、最初に条件を満たすハッシュを見つけたマイナーが、そのブロックの作成者として認められ、報酬を得られるのです。ちなみに、2025年現在のビットコインマイニングのハッシュレート（1秒間に実行されるハッシュ計算の回数）は<strong>およそ10²¹</strong>回と言われています。この計算により消費される電力は非常に大きく、ある調査では、中規模国家（アルゼンチンなど）の消費電力量に匹敵すると言われています。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        う…数字が大きすぎて想像もできないです。。
+      </div>
+    </div>
+  </div>
+
+<h2 id="4-ノード間の同期と分散台帳">4. ノード間の同期と分散台帳<a hidden class="anchor" aria-hidden="true" href="#4-ノード間の同期と分散台帳">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        マイナーがブロックを作ったら、その情報はどうやって他のノードに伝わるんですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        ブロックが完成すると、マイナーはその情報をネットワーク全体に伝播させます。各ノードは新しいブロックを受け取ると、自分のチェーンの最後に追加して、最新の状態を維持します。
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        でも先生、もし別々のマイナーが同時に違うブロックを作ってしまったらどうなるんですか？
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        それは「フォーク」と呼ばれる状態です。ノードは一時的に分岐したチェーンの両方を追跡しますが、次に追加されるブロックによって長さが違ってくると、より長くなったチェーンが正しいとみなされて採用されます。次の図のようなイメージです。
+      </div>
+    </div>
+  </div>
+
+<figure class="rounded shadow-lg">
+    <img loading="lazy" src="blockchain_fork.webp"
+         alt="ブロックチェーンのフォークとその解消" class="zoomable" 
+    /> <figcaption>
+            チェーンがフォークした場合、先に長くなった枝が正しいとみなされ、短い枝につくブロックはチェーンから外れる。
+        </figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_surprise_hu_d0c7b5ea5f021ec5.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        ちゃんと調整して1本に戻すんですね！分散してても協力してるって感じがします！
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        ちなみに「トランザクションがいつ確定したとみなされるのか」といった話題もありますが、これはもう少し複雑な内容になりますので、今回は触れずにおきましょう。今は「ブロックに取り込まれ、ネットワークで共有された時点で一通りの処理は終わる」と理解しておけば十分です。
+      </div>
+    </div>
+  </div>
+
+<h2 id="5-まとめと次章予告">5. まとめと次章予告<a hidden class="anchor" aria-hidden="true" href="#5-まとめと次章予告">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        今回は、ビットコインの中で「どうやって記録が作られ、守られているのか」がすごくよく分かりました！
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp" alt="江輝" loading="lazy">
+      <div class="talk-name">江輝</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80">
+      <div class="talk-text">
+        <p>今回の学習内容をまとめると以下のような内容になります。</p>
+<ul>
+<li>ユーザーはトランザクションを作り、電子署名をしてネットワークに送信する</li>
+<li>ノードはその取引を検証し、マイナーがブロックにまとめてマイニングを行う</li>
+<li>ネットワーク全体でブロックが共有され、台帳が同期される</li>
+</ul>
+<p>次回は、ブロックチェーンの仕組みがどのように社会で活用されているかを見ていきましょう。ビットコインをはじめとした暗号通貨のしくみや、ゲーム・デジタルアートにおけるNFTのような身近な事例を通じて、ブロックチェーン技術が私たちの生活にどんな役割を果たしているのかを学びます。</p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="talk talk-right">
+    <div class="talk-avatar-right">
+      <img src="/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp" alt="結" loading="lazy">
+      <div class="talk-name">結</div>
+    </div>
+    <div class="talk-body" style="--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080">
+      <div class="talk-text">
+        実際に使われてる場面を知れるって、なんだかワクワクします！
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://welcomeblockchain.net/beginner/what_is_blockchain/">
+    <span class="title">« 前へ</span>
+    <br>
+    <span>【初級】第1章：ブロックチェーンとは何か</span>
+  </a>
+</nav>
+
+  </footer>
+
+
+
+
+
+
+<div class="comment-section">
+  <div class="talk talk-left">
+    <div class="talk-avatar-left">
+      <img src="/images/sakai_normal.webp" alt="鎖塊" loading="lazy" style="width:80px;height:80px">
+    </div>
+    <div class="talk-body" style="--talk-color-light: #D0FFD080;--talk-color-dark: #041F0480">
+      <div class="talk-text">
+        ご意見・ご感想をXのポストにリプライしていただけると励みになります。
+        <a href="https://twitter.com/tomoyosi_sakai/status/1234567890123456789" target="_blank" rel="noopener noreferrer">
+            🗨️ コメントする（Xのポストへ）
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://welcomeblockchain.net/">ようこそ！ブロックチェーンの世界へ</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script>
+  mediumZoom('.zoomable', {
+    background: 'rgba(0, 0, 0, 0.8)',
+    margin: 24
+  });
+</script>
+
+<script language="javascript" type="text/javascript" src="https://welcomeblockchain.net/menu_trigger.min.aa0f772e61a331c8fc9605144a42cd7b04abce776a74690c1127a739dbfe60cd.js"></script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+    
+    
+</body>
+
+</html>
