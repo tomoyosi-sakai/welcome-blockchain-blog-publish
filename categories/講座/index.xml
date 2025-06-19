@@ -6,7 +6,7 @@
     <description>Recent content in 講座 on ようこそ！ブロックチェーンの世界へ</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 17 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://welcomeblockchain.net/categories/%E8%AC%9B%E5%BA%A7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【初級】ブロックチェーン講座について</title>
@@ -351,7 +351,7 @@
     &lt;/div&gt;
     &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
       &lt;div class=&#34;talk-text&#34;&gt;
-        第３章『ブロックチェーンの主な活用例』では、ビットコインをはじめNFTや医療記録、投票システムなど、身近なユースケースを通じて用途とメリットを学びます。
+        第３章『ブロックチェーンをどう使うのか』では、ビットコインをはじめNFTや医療記録、投票システムなど、身近なユースケースを通じて用途とメリットを学びます。
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -413,7 +413,7 @@
     &lt;/div&gt;
     &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
       &lt;div class=&#34;talk-text&#34;&gt;
-        そして最終章の第４章『メリット・課題・今後の展望』では、改ざん耐性や透明性などの強みと、スケーラビリティやエネルギー消費といった課題を整理し、レイヤー２やゼロ知識証明といった最新技術まで概観します。
+        そして最終章の第４章『ブロックチェーンはどうなるのか』では、スケーラビリティやエネルギー消費といった課題を整理し、レイヤー２やゼロ知識証明といった最新技術まで概観します。
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -2922,6 +2922,1523 @@
     &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
       &lt;div class=&#34;talk-text&#34;&gt;
         &lt;p&gt;本章で学んだことを整理しましょう。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>【初級】第4章：ブロックチェーンはどうなるのか</title>
+      <link>https://welcomeblockchain.net/beginner/future_of_blockchain/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://welcomeblockchain.net/beginner/future_of_blockchain/</guid>
+      <description>&lt;h2 id=&#34;1-はじめに&#34;&gt;1. はじめに&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        結さん、これまでの講義でブロックチェーンの基本構造や利用例について学びましたね。今回はその応用をさらに広げるために、いま技術が直面している課題と、それを乗り越えるための最新の取り組みに焦点を当ててみましょう。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        はい！すごく興味あります。でも課題って…そんなにたくさんあるんですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;2-ブロックチェーンが抱える課題&#34;&gt;2. ブロックチェーンが抱える課題&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ブロックチェーンは非常に画期的な技術ですが、いくつかの大きな課題を抱えているのも事実です。その代表例が「取引処理の遅さ」と「電力消費の大きさ」です。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        あっ、ビットコインのマイニングってすごく電気を使うというお話でしたね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そうですね。ビットコインでは、1件の取引が承認されるまでに10分以上かかることもあり、そのためのマイニング作業に大量の電力が使われています。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        たしかにニュースでも「環境に悪い」って言われたりしますよね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そうですね。そこで登場するのが、「PoS（プルーフ・オブ・ステーク）」という仕組みです。これは、計算力ではなく、仮想通貨の保有量に応じて取引の承認権が与えられる仕組みで、消費電力を大幅に削減できます。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;pow_vs_pos.webp&#34;
+         alt=&#34;プルーフオブワークとプルーフオブステーク&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            プルーフオブステークでは仮想通貨の保有量に応じて取引の承認権が与えられる
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        パワー勝負じゃなくて、信頼で選ばれるって感じなんですね！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        とても良い例えですね。実際にイーサリアムというブロックチェーンは、2022年に行われた大規模なアップグレード「The Merge（マージ）」によって、従来のPoW（プルーフ・オブ・ワーク）からPoSに切り替えられました。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        イーサリアムってよく聞くけど…ビットコインとは違うんですか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ええ、違います。イーサリアムは、仮想通貨『ETH（イーサ）』を使った取引に加えて、「スマートコントラクト」と呼ばれる自動実行されるプログラムを組み込める特徴があります。そのため、NFTやDeFiといった分散型アプリケーション（DApps）の多くがイーサリアム上で展開されています。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        次に、「スケーラビリティ」も大きな課題です。これは、たくさんの取引を同時に処理する能力の限界のことです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        あ、つまり「遅い」っていうのとはまた違って、「混雑しやすい」ってことなんですね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        その通りです。たとえばイーサリアムのレイヤー1では、1秒に15件ほどしか処理できません。レイヤー1というのは、基本機能を直接支えるメインのブロックチェーンを指します。安全性や信頼性は高い一方で、取引量が多くなると処理が追いつかず、手数料が高騰したり、反映に時間がかかったりします。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        それって、人気のネットショップが混みすぎて注文できなくなるみたいな感じですね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        まさにそれです。そうした問題を解決するために登場したのが「レイヤー2技術」です。これは、取引の大部分をブロックチェーンの外で一時的に処理し、後からまとめてレイヤー1に記録する仕組みです。たとえば「ロールアップ」はその代表例で、Optimistic Rollupでは1秒に約2,000件、ZK Rollupでは4,000件以上の処理が可能です。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;compress_by_rollups.webp&#34;
+         alt=&#34;ロールアップによる取引情報の圧縮&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            ロールアップにより単位時間当たりに実行可能なトランザクション数が飛躍的に向上する。
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        すごい！外でまとめて、あとで書き込むって、まるで宅配便の仕分けセンターみたいです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        他にも、ビットコインの「ライトニングネットワーク」という仕組みでは、理論上100万件/秒の処理性能を実現でき、手数料も0.001ドル未満と非常に低コストです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        それなら、毎日何百万人が使っても安心ですね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;3-次世代を支える最新技術&#34;&gt;3. 次世代を支える最新技術&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        スケーラビリティのほかに、もう一つ重要なテーマが「プライバシー」です。ブロックチェーンは誰でも取引履歴を見られるという透明性が強みですが、その分、取引内容まで公開されてしまう点が懸念されることもあります。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        たしかに、あんまり知られたくないことまで見られちゃうのはちょっと心配かも…
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そこで登場するのが「ゼロ知識証明（ZKP）」という暗号技術です。ZKPを使えば、取引の内容を明かさなくても、「この取引はルールに沿って正しく行われている」ということだけを証明できます。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        中身を見せなくても正しいってわかるなんて、不思議ですね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        実際の仕組みは数学に基づいたもので、たとえばZcashという通貨では、送信者・受信者・金額といった情報をすべて非公開にしながらも、その取引が正当なものだということをブロックチェーン上で証明しています。ZKPを使うと、トランザクションの中で何を公開し、何を隠すかを細かく制御できるようになります。取引はブロックチェーンに記録されますが、記録されるのは「証明結果」や「暗号化されたハッシュ」だけで、内容そのものは公開されません。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        えっ、それでも「本当にちゃんとした取引だ」ってわかるんですか？なぜなんでしょうか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そうですね。ZKPをイメージしやすいたとえとして「迷路の証明」があります。たとえば、大きな迷路があって、ゴールにたどり着けるのは正しいルートを知っている人だけだとしましょう。証明者はそのルートを誰にも見せずに、入り口から入って出口から出ることで「ルートを知っている」と示せます。中のルートは秘密のまま、ゴールに着いたことだけが確認されるわけです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;maze_proof.webp&#34;
+         alt=&#34;迷路の証明&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            証明者は迷路に迷わずに出口にたどり着くことで、迷路を開示せずに正しい道を知っていることを証明する。
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        あっ、なるほど！出口に出てきたところを見せれば、通れたってことだけがわかるんですね！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        でも、本当はルートを知らなくても、運よく抜けられることもあるかもしれませんか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        いい視点ですね。ゼロ知識証明では、「偶然」や「まぐれ」で通り抜けられたかどうかを防ぐために、迷路の出入りを何度もランダムに繰り返してもらうような工夫がされています。つまり、たった1回の成功ではなく、繰り返し正しい行動を見せることで、ルートを本当に知っていることを数学的に確率的に保証するのです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        それなら、偶然に抜けられたということもなくなりそうですね！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        この技術を使えば、医療記録や企業間の契約のように、見せたくない情報を守りながらも、それが正しい情報であることだけを証明できます。また、スマートコントラクトと組み合わせることで、「18歳以上である」ことを証明しながら生年月日は隠す、などの応用も可能です。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        秘密のまま、信頼だけ伝える…まさに未来の仕組みですね！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        はい。ZKPは、これからのブロックチェーン技術の発展を支える柱のひとつとなるはずです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        技術って、人を疑わなくて済むようになる仕組みでもあるんですね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        まさにその通りです。「信頼をコードにする」ことが、ブロックチェーンの本質ですから。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;4-ブロックチェーンの未来&#34;&gt;4. ブロックチェーンの未来&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        最後に、ブロックチェーンの将来について、より発展的な観点から考えてみましょう。第3章では、すでにビットコインやNFT、ゲーム、投票、医療、物流など、さまざまな分野での応用例を見てきましたね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_surprise_hu_d0c7b5ea5f021ec5.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        はい、あれを見て「こんなにいろんな使い道があるんだ！」ってびっくりしました。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        これからは、そうした「点」の活用が「面」になっていく時代です。つまり、個別のサービスにとどまらず、都市全体、国全体をまたいだスケーラブルなインフラとして、ブロックチェーンが統合されていくのです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;integrate_blockchain.webp&#34;
+         alt=&#34;統合されるブロックチェーン&#34; class=&#34;zoomable&#34; 
+    /&gt; &lt;figcaption&gt;
+            都市全体、国全体をまたいだスケーラブルなインフラとしてブロックチェーンが統合されていく。
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        国全体って、どういう感じなんでしょうか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        たとえばエストニアという国では、国民のID、健康記録、投票、税申告といった行政サービスがほぼすべてブロックチェーン基盤で支えられています。つまり「自分のデータを自分で管理し、必要なときだけ安全に開示する」社会が実現しつつあるのです。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_surprise_hu_d0c7b5ea5f021ec5.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        え！もうそんなにブロックチェーンが普及している国があるなんて驚きです！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        日本でも、教育分野で卒業証明書のブロックチェーン化や、地域通貨に応用する実験が進められています。世界では「ブロックチェーン国家」や「スマートシティ構想」といったキーワードも出てきています。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_worry_hu_1e9fe23b491348ae.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        じゃあ、将来は「ブロックチェーンに対応していないと困る社会」になるかもしれませんね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        その通りです。そして同時に、課題も出てきます。プライバシー保護と透明性のバランス、法整備、技術標準の統一、そしてなにより「誰もが使えるUX（ユーザー体験）」の設計が必要になります。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        技術だけじゃなくて、人間にやさしい仕組みにするのが大事なんですね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_think_hu_1b73d4faa5047f4.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        はい。だからこそ、技術を知るだけでなく「それが人の暮らしにどう関わるのか」を考え続けることが、未来をつくる鍵になります。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;5-まとめ&#34;&gt;5. まとめ&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/ether/ether_normal_hu_4ff5de24e79436d9.webp&#34; alt=&#34;江輝&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;江輝&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        &lt;p&gt;今回の講義では、次のような点を学びました。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
