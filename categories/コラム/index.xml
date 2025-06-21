@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>コラム on ようこそ！ブロックチェーンの世界へ</title>
+    <link>https://welcomeblockchain.net/categories/%E3%82%B3%E3%83%A9%E3%83%A0/</link>
+    <description>Recent content in コラム on ようこそ！ブロックチェーンの世界へ</description>
+    <generator>Hugo -- 0.147.7</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 21 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://welcomeblockchain.net/categories/%E3%82%B3%E3%83%A9%E3%83%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【コラム】贈与経済2.0について</title>
+      <link>https://welcomeblockchain.net/column/gift_economy_2/</link>
+      <pubDate>Sat, 21 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://welcomeblockchain.net/column/gift_economy_2/</guid>
+      <description>&lt;h2 id=&#34;1-はじめに&#34;&gt;1. はじめに&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_normal_hu_a64ab49df54d7452.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ねえお姉ちゃん、その本なに読んでるの？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        これはね、『贈与経済2.0』っていう本。ちょっと難しいけど、すごく面白いの。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;2-贈与経済20ってなに&#34;&gt;2. 贈与経済2.0ってなに？&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_normal_hu_a64ab49df54d7452.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        贈与？ってあげるやつ？お年玉とかプレゼントとか？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そうそう、昔からある「贈り物」の文化を、ブロックチェーンの技術でアップデートした経済の仕組みなんだって。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_think_hu_e678540a0ee72645.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        へぇ〜…でも経済ってお金のことでしょ？プレゼントとどう関係あるの？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        いい質問だね。昔の贈与って、ただの善意に見えても、実は「もらったら返さなきゃ」っていう気持ちが強くて、ちょっと重たい面もあったんだって。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_worry_hu_7e0463706a2eed94.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        あー、それあるかも。わたしも友だちに何かもらったら、すぐ何か返さなきゃって思っちゃう。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;trouble_deciding.webp&#34;
+         alt=&#34;プレゼントのお返しに悩む円&#34; class=&#34;zoomable&#34; 
+    /&gt; 
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        でもね、贈与経済2.0では、その「ありがとう」の気持ちをブロックチェーンに記録して、誰かが何かをしてくれたことが、社会全体で見えるようになるの。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_surprise_hu_51916f5b48f17260.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        えーっ！？感謝を記録するの！？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そう、それでその「ありがとう」は「ハート」っていうトークンとして記録されるんだよ。誰が誰にどんなことをしたか、ずっと透明に残るの。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_think_hu_e678540a0ee72645.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        へぇ〜……でも、それってなんか照れくさくない？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        うん、でも面白いことに、たくさん「ありがとう」を集めた人は、他の場所でも信頼されるようになるの。まるで「信頼の通帳」みたいにね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;3-贈与の負債感を軽減する仕組みとは&#34;&gt;3. 贈与の負債感を軽減する仕組みとは？&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_worry_hu_7e0463706a2eed94.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        でもさ、たとえ記録が残るって言われても、何かをもらったら、やっぱり何か返さなきゃって気分になると思うんだけど…私だけかな？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ううん、円だけじゃないよ。そう思う人はたくさんいると思う。でもね、贈与経済2.0では「直接返さなくてもいい」って考え方があるの。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_surprise_hu_51916f5b48f17260.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        えっ、どういうこと？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        誰かにしてもらったことは、その人に返すんじゃなくて、次に別の誰かへ「恩送り」するんだよ。バトンみたいに感謝が回っていくの。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_idea_hu_5c84e47ca34ebb99.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        なるほど…バトンリレーみたいでちょっと楽しそうかも！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そうでしょ？誰かに何かをしてあげたら、いつか違う人から助けてもらえる。それが記録に残って、見えるようになってるからこそ信頼の輪が広がるの。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;trust_ledger.webp&#34;
+         alt=&#34;信頼の通帳&#34; class=&#34;zoomable&#34; 
+    /&gt; 
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        それにね、ハートがたくさん記録されていくと、「この人はたくさん人を助けてきたんだな」って社会全体に伝わるの。それがその人の信頼につながって、自然と周りから応援されたり、協力してもらえるようになるんだよ。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_idea_hu_5c84e47ca34ebb99.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        あ、そっか……「ありがとう」の記録が残って、それをみんなが見てくれるだけで少しお返しできてる感じがするね。それならすこし気が楽かも。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;4-むすびに&#34;&gt;4. むすびに&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_smile_hu_ed10c76ec598722e.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        わぁ、それってめちゃくちゃいい仕組みだね！わたしも「ハート」いっぱいもらえる子になりたい！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ふふ、それならまずは…お皿洗いお願いしちゃおうかな♪
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_smile_hu_ed10c76ec598722e.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ラジャー！ハート1個ゲットだぜっ！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;gift_economy.webp&#34;
+         alt=&#34;お皿洗いを贈与する円とそれを見守る結&#34; class=&#34;zoomable&#34; 
+    /&gt; 
+&lt;/figure&gt;</description>
+    </item>
+  </channel>
+</rss>
