@@ -6,7 +6,7 @@
     <description>Recent content on ようこそ！ブロックチェーンの世界へ</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 21 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://welcomeblockchain.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【初級】ブロックチェーン講座について</title>
@@ -4439,6 +4439,529 @@
     &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #D0F0FF80;--talk-color-dark: #04181F80&#34;&gt;
       &lt;div class=&#34;talk-text&#34;&gt;
         &lt;p&gt;今回の講義では、次のような点を学びました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>【コラム】ビットコインってなに？</title>
+      <link>https://welcomeblockchain.net/column/what_is_bitcoin/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://welcomeblockchain.net/column/what_is_bitcoin/</guid>
+      <description>&lt;h2 id=&#34;1-はじめに&#34;&gt;1. はじめに&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_think_hu_e678540a0ee72645.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        ねぇお姉ちゃん、ニュースで「ビットコインの価格が上がった」って言ってたけど……ビットコインってお金なの？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        あ、ついに円もビットコインに興味出てきた？ビットコインはね、インターネット上で使える「仮想通貨」っていう新しいタイプのお金なんだよ。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_think_hu_e678540a0ee72645.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        仮想ってことは……実際にはないってこと？ゲームの中のコインみたいなやつ？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そう思っちゃうよね。でも違うの。ゲームのアイテムみたいに勝手に増やしたりはできないし、ちゃんと世界中の人が価値あるものとして使ってる、れっきとした「お金」なんだよ。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;2-ビットコインは安全&#34;&gt;2. ビットコインは安全？&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_surprise_hu_51916f5b48f17260.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        へぇ～。でも、お札とか硬貨もないのに、どうして「お金」って言えるの？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_idea_hu_97c9fad962023f27.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        いい質問。ビットコインはブロックチェーンっていう技術で管理されてて、そこに全部の取引記録が残されてるの。しかも、国とか銀行が操作してるわけじゃなくて、みんなのコンピュータで記録を守ってるのがすごいところ。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_worry_hu_7e0463706a2eed94.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        みんなでって…本当に安全なの？誰かが勝手に書き換えたりしたら？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_think_hu_810a7adc8fc74faa.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        実は、それができない仕組みになってるの。記録は世界中の人たちのパソコンに「分散」して保存されてて、誰か1人がズルしても他のみんなの記録と合わなかったら無効にされちゃうんだ。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;distributed_storage.webp&#34;
+         alt=&#34;記録は世界中で分散保存される&#34; class=&#34;zoomable&#34; 
+    /&gt; 
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;3-ビットコインはみんなで守る&#34;&gt;3. ビットコインはみんなで守る&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_idea_hu_5c84e47ca34ebb99.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        それって…クラスで全員が給食当番表を持ってる感じ？誰かがこっそり「明日はお休み」って書き換えても、みんなの表と違ってたらすぐバレる、みたいな？
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そのたとえ、ぴったりだよ。みんなが正しい情報を持ち合って、お互いにチェックしてるからこそ、信用できるんだよね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_think_hu_e678540a0ee72645.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        じゃあ、ビットコインって「みんなで見張ってるお金」ってことなんだね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        うん、それにビットコインは全部で2100万枚までって決まってて、それ以上は増えないの。だから「限りあるもの」として価値が保たれやすいんだ。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;bitcoin_supply.webp&#34;
+         alt=&#34;ビットコインの最大供給枚数は21,000,000枚&#34; class=&#34;zoomable&#34; 
+    /&gt; 
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_surprise_hu_51916f5b48f17260.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        お金って、必要なだけ作れるものだと思ってたけど……ビットコインは数が決まってるだ！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;h2 id=&#34;4-むすびに&#34;&gt;4. むすびに&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_normal_hu_2c631dcb11b6a218.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        そうだよ。ビットコインはまだまだ使い方も進化中だけど、もしかしたら未来では、もっと身近なお金になるかもしれないね。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-right&#34;&gt;
+    &lt;div class=&#34;talk-avatar-right&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/madoka/madoka_smile_hu_ed10c76ec598722e.webp&#34; alt=&#34;円&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;円&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFFFD080;--talk-color-dark: #1F1F0480&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        じゃあ今のうちにちょっと勉強して、未来の使い方に備えようかなっ！
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  &lt;div class=&#34;talk talk-left&#34;&gt;
+    &lt;div class=&#34;talk-avatar-left&#34;&gt;
+      &lt;img src=&#34;https://welcomeblockchain.net/images/characters/yui/yui_smile_hu_9b6f961f9ca9d024.webp&#34; alt=&#34;結&#34; loading=&#34;lazy&#34;&gt;
+      &lt;div class=&#34;talk-name&#34;&gt;結&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;talk-body&#34; style=&#34;--talk-color-light: #FFE0E080;--talk-color-dark: #1F101080&#34;&gt;
+      &lt;div class=&#34;talk-text&#34;&gt;
+        それ、いい考え！そうじゃあ、一緒にウォレット作ってみようか。ウォレットっていうのは、ビットコインを送ったり受け取ったりできる「デジタルのお財布」のことだよ。
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;figure class=&#34;rounded shadow-lg&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;teach_wallet.webp&#34;
+         alt=&#34;結と円がウォレットを作成している&#34; class=&#34;zoomable&#34; 
+    /&gt; 
+&lt;/figure&gt;</description>
     </item>
     <item>
       <title>【コラム】贈与経済2.0について</title>
